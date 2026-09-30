@@ -19,20 +19,37 @@ function ai() {
 
 type GenArgs = Omit<Parameters<GoogleGenAI["models"]["generateContent"]>[0], "model">;
 
-async function generate(models: string[], args: GenArgs) {
+// Out of quota or overloaded, as opposed to a bad request. The app tells the farmer to try again
+// in a minute for these, instead of asking for a clearer photo.
+export function isBusy(e: unknown) {
+  return /\b(429|503)\b|RESOURCE_EXHAUSTED|UNAVAILABLE|overloaded/i.test(String((e as Error)?.message ?? e));
+}
+
+async function generate(models: string[], args: GenArgs, retry = true) {
   let last: unknown;
-  for (const model of models) {
-    try {
-      return await ai().models.generateContent({ ...args, model });
-    } catch (e) {
-      last = e;
-      const msg = String((e as Error)?.message ?? e);
-      // Overloaded, out of quota or retired: try the next model. Anything else is a real error.
-      if (!/\b(429|500|503|404)\b|RESOURCE_EXHAUSTED|UNAVAILABLE|NOT_FOUND|no longer available/i.test(msg)) throw e;
-      console.warn(`gemini ${model} unavailable, trying next:`, msg.slice(0, 120));
+  let busy: unknown = null;
+  // Two passes: the free tier also limits requests per minute, so when every model is busy a
+  // short pause often lets the second pass through (a few judges testing at once, for example).
+  for (let pass = 0; pass < 2; pass++) {
+    if (pass) {
+      if (!busy || !retry) break;
+      await new Promise((r) => setTimeout(r, 4000));
+    }
+    for (const model of models) {
+      try {
+        return await ai().models.generateContent({ ...args, model });
+      } catch (e) {
+        last = e;
+        if (isBusy(e)) busy = e;
+        const msg = String((e as Error)?.message ?? e);
+        // Overloaded, out of quota or retired: try the next model. Anything else is a real error.
+        if (!/\b(429|500|503|404)\b|RESOURCE_EXHAUSTED|UNAVAILABLE|NOT_FOUND|no longer available/i.test(msg)) throw e;
+        console.warn(`gemini ${model} unavailable, trying next:`, msg.slice(0, 120));
+      }
     }
   }
-  throw last;
+  // Report "busy" if any model was busy, so a retired model later in the chain doesn't hide it.
+  throw busy ?? last;
 }
 
 export interface Extraction {
@@ -204,7 +221,7 @@ export async function speak(text: string): Promise<string | null> {
       responseModalities: ["AUDIO"],
       speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } } },
     },
-  });
+  }, false); // no pause and retry: the phone's own voice is a quicker fallback
   const part = res.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
   if (!part?.inlineData?.data) return null;
   const mime = part.inlineData.mimeType ?? "";

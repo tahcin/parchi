@@ -1,4 +1,6 @@
-import { extract, explain } from "@/lib/gemini";
+import { extract, explain, isBusy } from "@/lib/gemini";
+import { fallbackWords } from "@/lib/fallback";
+import { SAMPLE_READINGS } from "@/lib/samples";
 import { audit } from "@/lib/rules";
 import { sprayWindow } from "@/lib/weather";
 import { district } from "@/lib/geo";
@@ -25,6 +27,7 @@ interface Body {
   lon?: number;
   pumpsPerAcre?: number; // the farmer's answer to "how many tanks per acre?"
   recheck?: boolean; // same chit re-checked after that answer: don't count it twice
+  sample?: string; // the built-in example chit ("chilli" or "paddy"), not a real farmer's chit
 }
 
 function splitDataUrl(u: string) {
@@ -52,7 +55,10 @@ export async function POST(req: Request) {
   const crop = (CROP_LIST as string[]).includes(body.crop) ? body.crop : "other";
   const lang = getLanguage(body.lang);
   const hasLoc = Number.isFinite(body.lat) && Number.isFinite(body.lon);
+  const sample = body.sample === "chilli" || body.sample === "paddy" ? body.sample : null;
 
+  // Set when a fallback stood in for Gemini, so that answer isn't cached over a real one later.
+  let stoodIn = false;
   const key = await hash(`${crop}|${lang.code}|${image.data}|${audio?.data ?? ""}`);
   const hit = cache.get(key);
 
@@ -62,12 +68,23 @@ export async function POST(req: Request) {
   let place: Awaited<ReturnType<typeof district>>;
   try {
     [ex, spray, place] = await Promise.all([
-      hit ? Promise.resolve(hit.ex) : extract(image, crop, audio),
+      hit
+        ? Promise.resolve(hit.ex)
+        : extract(image, crop, audio).catch((e) => {
+            // The example chit must work even when the free quota is spent: fall back to what
+            // Gemini read from this same chit earlier.
+            if (sample && !audio) {
+              stoodIn = true;
+              return SAMPLE_READINGS[sample];
+            }
+            throw e;
+          }),
       hasLoc ? sprayWindow(body.lat!, body.lon!) : Promise.resolve(null),
       hasLoc ? district(body.lat!, body.lon!) : Promise.resolve({ state: null, district: null }),
     ]);
   } catch (e) {
     console.error("read failed", e);
+    if (isBusy(e)) return Response.json({ error: "busy" }, { status: 503 });
     return Response.json({ error: "read_failed" }, { status: 502 });
   }
 
@@ -98,7 +115,12 @@ export async function POST(req: Request) {
     words =
       hit?.words && (hit as { signature?: string }).signature === signature
         ? hit.words
-        : await explain(result, lang.english);
+        : await explain(result, lang.english).catch((e) => {
+            // The verdict is the rule engine's, so show it in plainer words rather than failing.
+            console.error("explain failed, using plain words", e);
+            stoodIn = true;
+            return fallbackWords(result, lang);
+          });
     // The result screen maps over these, so a model answer missing a field must not crash it.
     words = {
       headline: String(words?.headline ?? ""),
@@ -111,11 +133,14 @@ export async function POST(req: Request) {
     console.error("audit failed", e);
     return Response.json({ error: "audit_failed" }, { status: 502 });
   }
-  if (cache.size > 200) cache.delete(cache.keys().next().value!);
-  cache.set(key, Object.assign({ ex, words }, { signature }));
+  if (!stoodIn) {
+    if (cache.size > 200) cache.delete(cache.keys().next().value!);
+    cache.set(key, Object.assign({ ex, words }, { signature }));
+  }
 
   const flaggedProducts = result.products.filter((p) => p.flags.length);
-  if (!body.recheck) await saveReport({
+  // Only real chits go on the open map: not re-checks, and not the built-in examples.
+  if (!body.recheck && !sample) await saveReport({
     id: crypto.randomUUID(),
     ts: new Date().toISOString(),
     state: place.state,

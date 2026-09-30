@@ -58,7 +58,9 @@ export default function Home() {
   // The farmer's spray tanks per acre, remembered on the phone so we only ask once.
   const [pumps, setPumps] = useState<number | null>(null);
   const [askPumps, setAskPumps] = useState(false);
-  const lastRun = useRef<{ img: string; crop: CropId; audio?: string; histId?: string } | null>(null);
+  const lastRun = useRef<{ img: string; crop: CropId; audio?: string; histId?: string; sample?: string } | null>(null);
+  // Which message the error screen shows: an unreadable photo, or the service being busy.
+  const [errMsg, setErrMsg] = useState<"errRead" | "errBusy">("errRead");
   const runId = useRef(0); // a newer check (or going home) makes an older answer stale
   const [fresh, setFresh] = useState(false); // result came from a photo just taken, not a saved check
   // Automatic speaking (screen prompts and the verdict). Tapping a speaker button always speaks.
@@ -194,6 +196,7 @@ export default function Home() {
     try {
       img = await compressImage(f);
     } catch {
+      setErrMsg("errRead");
       setStep("error");
       prompt(s.errRead, lang.speech);
       return;
@@ -204,7 +207,8 @@ export default function Home() {
   async function useExample() {
     const blob = await (await fetch(`/samples/chit-${crop === "paddy" ? "paddy" : "chilli"}.png`)).blob();
     if (crop !== "paddy") setCrop("chilli");
-    run(await compressImage(blob), crop === "paddy" ? "paddy" : "chilli");
+    const which = crop === "paddy" ? "paddy" : "chilli";
+    run(await compressImage(blob), which, undefined, undefined, which);
   }
 
   function showResult(r: Result, speechLang: string) {
@@ -218,13 +222,13 @@ export default function Home() {
     if (voiceRef.current) speakResult(r.words.spoken, true);
   }
 
-  async function run(img: string, cropOverride?: CropId, pumpsOverride?: number, audioOverride?: string) {
+  async function run(img: string, cropOverride?: CropId, pumpsOverride?: number, audioOverride?: string, sample?: string) {
     const cropNow = cropOverride ?? crop ?? "other";
     const audio = audioOverride ?? voice ?? undefined;
     const id = ++runId.current;
     // A re-check of the same photo (the tanks answer) replaces its saved copy instead of adding one.
     const histId = pumpsOverride != null && lastRun.current?.img === img ? lastRun.current.histId : undefined;
-    lastRun.current = { img, crop: cropNow, audio, histId };
+    lastRun.current = { img, crop: cropNow, audio, histId, sample };
     setPhoto(img);
     setResult(null);
     setAudioUrl(null);
@@ -243,10 +247,11 @@ export default function Home() {
           lang: lang.code,
           pumpsPerAcre: pumpsOverride ?? pumps ?? undefined,
           recheck: pumpsOverride != null,
+          sample,
           ...(loc.current ?? {}),
         }),
       });
-      if (!res.ok) throw new Error(String(res.status));
+      if (!res.ok) throw new Error(res.status === 503 ? "busy" : String(res.status));
       const r = (await res.json()) as Result;
       if (id !== runId.current) return;
       setVoice(null);
@@ -260,10 +265,12 @@ export default function Home() {
           setHistory(addHistory({ id: hid, ts: Date.now(), crop: cropNow, lang: lang.code, thumb, result: r }));
         })
         .catch(() => {});
-    } catch {
+    } catch (e) {
       if (id !== runId.current) return;
+      const msg = (e as Error)?.message === "busy" ? "errBusy" : "errRead";
+      setErrMsg(msg);
       setStep("error");
-      prompt(s.errRead, lang.speech);
+      prompt(s[msg], lang.speech);
     }
   }
 
@@ -273,7 +280,7 @@ export default function Home() {
     store("parchi.pumps", String(n));
     // Re-check with the farmer's own tanks per acre. The chit reading is cached on the server,
     // so this is quick and doesn't read the photo again.
-    if (lastRun.current) run(lastRun.current.img, lastRun.current.crop, n, lastRun.current.audio);
+    if (lastRun.current) run(lastRun.current.img, lastRun.current.crop, n, lastRun.current.audio, lastRun.current.sample);
   }
 
   function openPast(h: SavedCheck) {
@@ -551,9 +558,9 @@ export default function Home() {
             </div>
             <div className="mt-4 flex w-full items-center gap-3 text-left">
               <p className="flex-1 text-[1.65rem] leading-tight font-extrabold" role="alert">
-                {s.errRead}
+                {s[errMsg]}
               </p>
-              <SpeakButton label={s.listen} onClick={() => sayNow(s.errRead, lang.speech)} />
+              <SpeakButton label={s.listen} onClick={() => sayNow(s[errMsg], lang.speech)} />
             </div>
             <button
               onClick={() => setStep("snap")}

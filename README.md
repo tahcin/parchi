@@ -85,6 +85,8 @@ Optional: `FIREBASE_PROJECT_ID` and `FIREBASE_API_KEY` to store audits in Firest
 
 Flash-Lite read our test chits correctly in about 2 seconds and has the most generous free quota. Results and audio are cached, so repeat checks of the same photo don't spend quota. Override with `GEMINI_MODEL`, `GEMINI_TALK_MODEL` and `GEMINI_TTS_MODEL` (comma-separated lists).
 
+When the free quota runs out: each chain pauses and retries once for per-minute limits. If the explanation still can't be written, the app shows the rule engine's verdict in plainer words (level labels in the farmer's language, the English details on the dealer note) instead of an error. The built-in example chits fall back to Gemini's earlier reading of the same chit (`src/lib/samples.ts`), and a real photo gets a "busy, try again in a minute" message rather than "take a clearer photo". Example checks are never added to the open map.
+
 ## Data and limits
 
 See [`data/SOURCES.md`](data/SOURCES.md). Detailed crop rules cover 22 crops (2,210 approved uses); ban and hazard checks work for every crop. "Not found" means "not confirmed", and the app says so.
