@@ -47,6 +47,10 @@ export default function About() {
           </li>
           <li>The next 48 hours of rain, wind and heat (Open-Meteo) give the best time to spray.</li>
           <li>
+            For the farmer&apos;s own field, a soil map (ISRIC SoilGrids) and the last week of rain and soil wetness (NASA POWER, satellite and model data) give one
+            regenerative tip: add compost, don&apos;t burn crop leftovers, and take extra care on sandy soil, where poison reaches well water fast.
+          </li>
+          <li>
             <strong>Gemini</strong> explains the verdict in the farmer&apos;s language, reads it aloud, and writes a polite note to show the dealer, with approved
             alternatives from the same government list (biological options first).
           </li>
@@ -65,6 +69,10 @@ export default function About() {
           <li>CIB&amp;RC, <em>List of pesticides banned, refused registration and restricted in use</em>, updated 31.07.2026, including S.O. 4294(E) of 03.10.2023.</li>
           <li>WHO Recommended Classification of Pesticides by Hazard, 2019 edition.</li>
           <li>Open-Meteo hourly forecast. BigDataCloud reverse geocoding for the district.</li>
+          <li>
+            ISRIC SoilGrids v2.0 (250 m soil map, CC BY 4.0) for soil type, pH and organic carbon, as an estimate: a Soil Health Card test is more exact. NASA
+            POWER daily rain and surface soil wetness (satellite and MERRA-2 model data, two or three days behind).
+          </li>
           <li>
             Kisan Call Centre transcripts (Ministry of Agriculture, data.gov.in, GODL-India) for the inspector map&apos;s real-data layer: 226,203 calls from 2022
             to 2024, read from a public mirror of the official file because the data.gov.in API was unreachable on the build date.

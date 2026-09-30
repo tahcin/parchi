@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { KCC_NUMBER, LANGUAGES, getLanguage, type Language } from "@/lib/i18n";
+import { KCC_NUMBER, LANGUAGES, getLanguage, type Language, type Strings } from "@/lib/i18n";
+import type { FieldData } from "@/lib/field";
 import { CROP_LIST, CROP_NAMES, type CropId } from "@/lib/crops";
 import { compressImage, sayNow, startRecording } from "@/lib/client";
 import type { Audit, Level } from "@/lib/rules";
@@ -21,6 +22,14 @@ type Step = "lang" | "crop" | "snap" | "checking" | "result" | "dealer" | "error
 const LEVEL_COLOR: Record<Level, string> = { ok: "text-ok", careful: "text-careful", danger: "text-danger" };
 const LEVEL_BG: Record<Level, string> = { ok: "bg-ok", careful: "bg-careful", danger: "bg-danger" };
 const LEVEL_TINT: Record<Level, string> = { ok: "bg-ok/10", careful: "bg-careful/10", danger: "bg-danger/10" };
+
+// Where the "Your field" card looks when the phone hasn't shared its location and the farmer is
+// trying a built-in example: a real farm area where each sample crop is widely grown.
+type FieldAt = { lat: number; lon: number; place?: string };
+const SAMPLE_FIELDS: Record<string, FieldAt> = {
+  chilli: { lat: 16.5, lon: 80.2, place: "Guntur, Andhra Pradesh" },
+  paddy: { lat: 30.8, lon: 75.9, place: "Ludhiana, Punjab" },
+};
 
 // Verdict choreography (ms from the result screen mounting). Keep in step with globals.css.
 const STAMP_LANDS = 700; // photo settles (280) + pause (150) + stamp press (~270)
@@ -61,6 +70,23 @@ export default function Home() {
   const lastRun = useRef<{ img: string; crop: CropId; audio?: string; histId?: string; sample?: string } | null>(null);
   // Which message the error screen shows: an unreadable photo, or the service being busy.
   const [errMsg, setErrMsg] = useState<"errRead" | "errBusy">("errRead");
+  const [fieldAt, setFieldAt] = useState<FieldAt | null>(null);
+  const [field, setField] = useState<FieldData | null>(null);
+
+  // Soil and satellite data for the field. Fetched after the verdict and never awaited by it.
+  useEffect(() => {
+    if (!fieldAt) return;
+    let live = true;
+    fetch(`/api/field?lat=${fieldAt.lat.toFixed(2)}&lon=${fieldAt.lon.toFixed(2)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j: FieldData | null) => {
+        if (live && j && (j.soil || j.sat)) setField(j);
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [fieldAt]);
   const runId = useRef(0); // a newer check (or going home) makes an older answer stale
   const [fresh, setFresh] = useState(false); // result came from a photo just taken, not a saved check
   // Automatic speaking (screen prompts and the verdict). Tapping a speaker button always speaks.
@@ -229,6 +255,12 @@ export default function Home() {
     // A re-check of the same photo (the tanks answer) replaces its saved copy instead of adding one.
     const histId = pumpsOverride != null && lastRun.current?.img === img ? lastRun.current.histId : undefined;
     lastRun.current = { img, crop: cropNow, audio, histId, sample };
+    const at = loc.current ? { ...loc.current } : sample ? SAMPLE_FIELDS[sample] ?? null : null;
+    // A re-check of the same chit keeps the same field, so don't fetch it again.
+    if (at?.lat !== fieldAt?.lat || at?.lon !== fieldAt?.lon) {
+      setFieldAt(at);
+      setField(null);
+    }
     setPhoto(img);
     setResult(null);
     setAudioUrl(null);
@@ -262,7 +294,8 @@ export default function Home() {
         .then((thumb) => {
           const hid = histId ?? Date.now().toString(36);
           if (lastRun.current?.img === img) lastRun.current.histId = hid;
-          setHistory(addHistory({ id: hid, ts: Date.now(), crop: cropNow, lang: lang.code, thumb, result: r }));
+          const field = at ? { lat: Number(at.lat.toFixed(2)), lon: Number(at.lon.toFixed(2)), place: at.place } : undefined;
+          setHistory(addHistory({ id: hid, ts: Date.now(), crop: cropNow, lang: lang.code, thumb, result: r, field }));
         })
         .catch(() => {});
     } catch (e) {
@@ -288,6 +321,8 @@ export default function Home() {
     setFresh(false);
     setCrop(h.crop);
     setPhoto(h.thumb);
+    setFieldAt(h.field ?? null);
+    setField(null);
     showResult(h.result, h.lang);
   }
 
@@ -684,6 +719,8 @@ export default function Home() {
                 />
               </div>
 
+              {field && fieldAt && <FieldLine field={field} at={fieldAt} s={s} bcp47={lang.speech} />}
+
               <button
                 onClick={() => setShowMore((v) => !v)}
                 aria-expanded={showMore}
@@ -693,7 +730,7 @@ export default function Home() {
                 {s.more}
                 <ChevronDownIcon size={22} className={`chev ${showMore ? "rotate-180" : ""}`} />
               </button>
-              {showMore && <Details audit={result.audit} />}
+              {showMore && <Details audit={result.audit} field={field} place={fieldAt?.place} />}
             </div>
           </section>
         )}
@@ -919,6 +956,33 @@ function Prompt({ text, listen, onSpeak }: { text: string; listen: string; onSpe
   );
 }
 
+// One quiet line about the farmer's own field, below the actions: a single regenerative tip in
+// their language and a plain facts line. The numbers (pH, carbon, soil wetness) are for helpers
+// and sit under "more". Wet soil is not shown here: the live forecast already sets the spray time,
+// and satellite data a few days old must not contradict it.
+function FieldLine({ field, at, s, bcp47 }: { field: FieldData; at: FieldAt; s: Strings; bcp47: string }) {
+  const f = s.field;
+  const tip = field.tips.find((t) => t !== "wet");
+  if (!tip) return null;
+  const text = { addCarbon: f.addCarbon, keepCarbon: f.keepCarbon, sandy: f.sandyTip }[tip];
+  const good = tip === "keepCarbon";
+  const title = at.place ? `${f.example} · ${at.place}` : f.title;
+  const facts = [field.soil?.texture && f[field.soil.texture], field.sat && `${f.rain7}: ${field.sat.rain7} mm`].filter(Boolean).join(" · ");
+  return (
+    <section className="fade mt-5 flex items-start gap-3 rounded-2xl border-2 border-ink bg-white/90 p-4" aria-label={title}>
+      <span className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white ${good ? "bg-ok" : "bg-careful"}`}>
+        <LeafIcon size={24} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-sm leading-tight font-semibold text-ink-soft">{title}</p>
+        <p className="mt-1 text-lg leading-snug font-bold">{text}</p>
+        {facts && <p className="mt-1 text-sm leading-snug text-ink-soft">{facts}</p>}
+      </div>
+      <SpeakButton label={s.listen} onClick={() => sayNow(text, bcp47)} />
+    </section>
+  );
+}
+
 function Fact({ icon, tone, top, bottom }: { icon: React.ReactNode; tone: string; top: string; bottom: string }) {
   return (
     <div className="flex flex-col gap-2 rounded-2xl border-2 border-ink bg-white/90 p-3">
@@ -950,7 +1014,7 @@ function Action({ icon, label, onClick, href, strong }: { icon: React.ReactNode;
   );
 }
 
-function Details({ audit }: { audit: Audit }) {
+function Details({ audit, field, place }: { audit: Audit; field: FieldData | null; place?: string }) {
   return (
     <div id="more-details" className="fade mt-3 divide-y-2 divide-dashed divide-rule rounded-2xl border-2 border-ink bg-white/95 text-base leading-snug" lang="en">
       {audit.products.map((p) => (
@@ -1017,6 +1081,33 @@ function Details({ audit }: { audit: Audit }) {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+      {field && (field.soil || field.sat) && (
+        <div className="p-4">
+          <p className="font-extrabold">{place ? `Example field near ${place}` : "Your field"}: soil and satellite estimates</p>
+          <dl className="mt-2 space-y-1">
+            {field.soil?.texture && (
+              <Row
+                k="Soil (top 30 cm)"
+                v={`${field.soil.texture} (sand ${field.soil.sand}%, clay ${field.soil.clay}%)${field.soil.ph != null ? `, pH ${field.soil.ph}` : ""}`}
+              />
+            )}
+            {field.soil?.carbon != null && <Row k="Organic carbon" v={`${field.soil.carbon}% (Soil Health Card bands: below 0.5% low, 0.5 to 0.75% medium)`} />}
+            {field.sat && <Row k="Rain, last 7 days" v={`${field.sat.rain7} mm, to ${field.sat.asOf}`} />}
+            {field.sat?.wet != null && (
+              <Row
+                k="Surface soil wetness"
+                v={`${Math.round(field.sat.wet * 100)}%${field.tips.includes("wet") ? ". Very wet: check that the field has dried before spraying" : ""}`}
+              />
+            )}
+          </dl>
+          <p className="mt-2 text-sm text-ink-soft">
+            {[field.soil && "Soil: ISRIC SoilGrids 250 m map estimate (a Soil Health Card test is more exact)", field.sat && "Rain and soil wetness: NASA POWER, satellite and model data"]
+              .filter(Boolean)
+              .join(". ")}
+            .
+          </p>
         </div>
       )}
       <p className="p-4 text-sm text-ink-soft">Checked against: {audit.dataAsOf}. Gemini reads the chit; the verdict comes from the government records above.</p>

@@ -131,6 +131,14 @@ https://www.data.gov.in/resource/kisan-call-centre-kcc-transcripts-farmers-queri
 - Only Latin-script names are matched. Answers written wholly in Hindi, Telugu, Tamil and so on are missed, so states whose advisers write English names (Andhra Pradesh, Telangana, Odisha, Uttar Pradesh) are over-represented. Some Indic text in the mirror is damaged encoding.
 - Rows with state "NA" or "0" were dropped.
 
+## 7. Field conditions (live lookups, nothing stored)
+
+`src/lib/field.ts`, served at `GET /api/field?lat=&lon=`, rounded to about 1 km.
+
+- **Soil:** ISRIC SoilGrids v2.0 REST API (`rest.isric.org/soilgrids/v2.0/properties/query`), mean values of `phh2o`, `soc`, `sand` and `clay` for 0 to 5, 5 to 15 and 15 to 30 cm, averaged by layer thickness. CC BY 4.0. A 250 m modelled map, not a lab test: it tends to read organic carbon high for Indian soils, so the app calls it an estimate. Towns and water are masked and return no data.
+- **Rain and soil wetness:** NASA POWER daily point API (`power.larc.nasa.gov/api/temporal/daily/point`, community `AG`), `PRECTOTCORR` (bias-corrected precipitation, mm/day) and `GWETTOP` (surface soil wetness, 0 to 1), from satellite observations and the MERRA-2 model. The newest two or three days are still being processed (`-999`) and are skipped.
+- **Tips:** organic carbon below 0.75% (the top of the Soil Health Card "medium" band) gets "add compost or farmyard manure, don't burn crop leftovers", otherwise "keep adding compost". Sand at 60% or more gets the well-water warning. More than 40 mm of rain in 7 days, or surface wetness of 0.8 or more, is noted as "very wet" under "more"; it is not shown as a farmer tip, because the live forecast sets the spray time.
+
 ## General
 
 - Dates: the documents are dated 31.03.2026 (Major Uses, registered list) and 31.07.2026 (banned list). All were accessed on 2026-09-30.

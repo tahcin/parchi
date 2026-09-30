@@ -21,6 +21,9 @@ export interface SavedCheck {
   lang: LangCode;
   thumb: string; // small JPEG data URL
   result: Result;
+  // Where the "Your field" line looked (rounded to about 1 km), so a reopened check shows it too.
+  // Older saved checks don't have it.
+  field?: { lat: number; lon: number; place?: string };
 }
 
 const KEY = "parchi.history";
