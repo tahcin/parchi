@@ -13,7 +13,7 @@ export async function GET(req: Request) {
   return Response.json(
     {
       license: "CC BY 4.0",
-      schema: "https://github.com/tahcin/parchi#open-data",
+      schema: "https://github.com/tahcin/parchi#for-states",
       note: "Rows with seed=true are a labelled synthetic demo seed, not real reports.",
       count: rows.length,
       reports: rows,
