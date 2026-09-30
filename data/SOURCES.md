@@ -1,6 +1,6 @@
 # Data sources: Dealer Prescription Auditor
 
-All files were built on 2026-09-30 from official documents downloaded that day. Nothing was typed in by hand except `aliases.json` (brand names, which CIB&RC does not publish) and the transcription of the banned list (checked line by line against the PDF). Raw PDFs and parse scripts are kept outside the repo in the session scratchpad (`scratchpad/cibrc/`).
+All files were built on 2026-09-30 from official documents downloaded that day. Nothing was typed in by hand except `aliases.json` (brand names, which CIB&RC does not publish) and the transcription of the banned list (checked line by line against the PDF). The raw PDFs are not included in this repo; every file is linked below.
 
 ## 1. `registered_uses.json` (2,721 records)
 
