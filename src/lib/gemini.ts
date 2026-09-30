@@ -52,7 +52,7 @@ const EXTRACT_SCHEMA = {
       items: {
         type: "object",
         properties: {
-          written: { type: "string", description: "the product name and strength as written (e.g. \"Monocil 36 SL\"), transliterated to Latin script, WITHOUT the serial number or the dose" },
+          written: { type: "string", description: "the product name and strength exactly as written on the image (brand plus strength and formulation such as 36 SL), transliterated to Latin script, WITHOUT the serial number or the dose" },
           brand: { type: ["string", "null"] },
           actives: {
             type: "array",
@@ -151,7 +151,7 @@ export async function explain(auditResult: Audit, languageName: string): Promise
             text:
               `A small farmer in India showed us the pesticide chit their dealer gave them. Our rule engine checked it against India's official CIB&RC records. ` +
               `Explain the result to the farmer in ${languageName}. The farmer may not read well, so write the way a kind, respected village elder talks: very short sentences, everyday words, ` +
-              `no chemistry. Write every word in ${languageName} script except product brand names and strengths (keep "Monocil 36 SL" exactly as written). Never mix in English words such as approved, banned, dose, spray or label: use the everyday ${languageName} word. Never add facts that are not in the audit JSON. Never say a product is safe or legal unless the audit has no flags for it.\n\n` +
+              `no chemistry. Write every word in ${languageName} script except product names and strengths, which you copy exactly from the "written" field of the audit JSON. Never use a product name that is not in the JSON. Never mix in English words such as approved, banned, dose, spray or label: use the everyday ${languageName} word. Never add facts that are not in the audit JSON. Never say a product is safe or legal unless the audit has no flags for it.\n\n` +
               `Return:\n` +
               `- headline: 3 to 6 words in ${languageName}, the overall verdict.\n` +
               `- spoken: at most 4 short sentences in ${languageName} to be read aloud: the verdict, the most important danger, and exactly what to do next (including the safe harvest date if given).\n` +
