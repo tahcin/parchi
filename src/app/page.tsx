@@ -693,7 +693,7 @@ export default function Home() {
 
         {step === "dealer" && result && (
           <section className="screen mt-1">
-            <div className="perforated lined relative rounded-b-2xl border-2 border-t-0 border-ink bg-[#fffdf6] px-4 pt-7 pb-5 min-[400px]:px-5 shadow-[8px_8px_0_0_var(--ink)]">
+            <div className="perforated relative rounded-b-2xl border-2 border-t-0 border-ink bg-[#fffdf6] px-4 pt-7 pb-5 min-[400px]:px-5 shadow-[8px_8px_0_0_var(--ink)]">
               <div className="flex items-center gap-3">
                 <LogoMark size={52} />
                 <p className="text-sm leading-tight font-bold tracking-widest text-ink-soft uppercase" lang="en">
