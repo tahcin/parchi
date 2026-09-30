@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parchi: a second opinion on every spray chit
 
-## Getting Started
+**Track 04, Agricultural Intelligence.** Google Build with AI: Code for Communities, 2026.
 
-First, run the development server:
+A farmer photographs the pesticide dealer's handwritten chit (*parchi*). Gemini reads it, a rule engine checks every product against India's official CIB&RC pesticide records, and the farmer hears the verdict in their own language: what is banned, what is not approved for their crop, what is overdosed, when it is safe to harvest, and a polite note to show the dealer with approved alternatives. Every audit feeds an anonymised, open dataset that state pesticide inspectors can use to find where banned and off-label products are being sold.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Why
+
+- Government extension staff reach about **6.8%** of farmers (1 per 1,162 holdings against a norm of 1 per 750). [ICRISAT](https://oar.icrisat.org/11401/1/Agriculture-Extension-System-in-India-A-Meta-analysis.pdf)
+- So the dealer, who has sales targets, writes the prescription, and **55%** of farmers don't read the label. [Scroll](https://scroll.in/article/875774/indian-farmers-spray-a-toxic-cocktail-of-pesticides-because-the-government-lacks-staff-to-guide-them), [JFMPC](https://www.ovid.com/jnls/jfmpc/fulltext/10.4103/jfmpc.jfmpc_405_22~agricultural-pesticide-use-and-misuse-a-study-to-assess-the)
+- **118 of 339** registered pesticides are highly hazardous, and they make up 42% of the volume used. [LSE South Asia, Dec 2025](https://blogs.lse.ac.uk/southasia/2025/12/01/pesticide-suicides-in-india-failures-and-solutions/)
+- Crop apps diagnose a disease and suggest a product. None of them check what the dealer actually sold.
+
+## How it works
+
+```
+photo of chit (+ optional voice note)
+        │
+        ▼
+Gemini 3.5 Flash-Lite (multimodal) ──► products, active ingredients, strength, dose, problem
+        │
+        ▼
+Rule engine (deterministic, cited) ◄── CIB&RC approved uses (31.03.2026)
+        │                          ◄── CIB&RC banned / restricted list (31.07.2026)
+        │                          ◄── WHO hazard classes (2019)
+        │                          ◄── Open-Meteo 48h forecast (spray window)
+        ▼
+Gemini ──► verdict in the farmer's language + dealer note ──► Gemini TTS (spoken)
+        │                    ▲
+        │                    └── "tanks per acre?" answer re-checks the dose
+        │
+        ▼
+Anonymised record ──► Firestore ──► Inspector dashboard + open API (CC BY 4.0)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The model reads and explains. It never decides whether a product is legal: that comes from the rule engine over official data, with the source shown for every flag.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Check | Source |
+|---|---|
+| Banned, refused or withdrawn in India | CIB&RC list, 31.07.2026 |
+| Banned on this crop (e.g. monocrotophos on vegetables, malathion on tomato) | CIB&RC list, S.O. 4294(E) |
+| Stopped formulations (monocrotophos 36% SL, carbofuran other than 3% CG) | CIB&RC list, S.O. 4294(E) |
+| Not approved for this crop, or for this pest | CIB&RC Major Uses |
+| Dose above the highest approved dose (using the farmer's tanks per acre when given) | CIB&RC Major Uses |
+| Waiting period before harvest, as a date | CIB&RC Major Uses |
+| WHO Class Ia / Ib | WHO 2019 |
+| Same active twice, same mode-of-action group, 3+ product cocktails | IRAC / FRAC groups |
+| Rain, wind or heat in the spray window | Open-Meteo |
 
-## Learn More
+## For farmers
 
-To learn more about Next.js, take a look at the following resources:
+- 11 languages: Hindi, Marathi, Telugu, Kannada, Tamil, Gujarati, Punjabi, Bengali, Odia, Malayalam, English
+- 22 crops as picture tiles (five on the home screen, the rest one tap away)
+- One action per screen, everything read aloud (with an off switch), traffic-light stamp verdicts
+- One picture question when it matters: "how many spray tanks per acre?", so the dose check uses the farmer's real spraying. Asked once, remembered on the phone.
+- "Show this to the dealer" card, one-tap Kisan Call Centre (1800-180-1551), WhatsApp share
+- Past checks saved on the phone, and an installable app that opens without internet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## For states
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/inspector`: three layers on one district map: live audits from the app, real Kisan Call Centre call data, and a labelled demo seed. Most flagged products and a cross-state early warning.
+- `GET /api/v1/reports?state=&crop=&live=1`: anonymised open feed (district, rounded location, crop, verdict, flag codes, actives). No names, phone numbers or photos. Stored in Firestore with append-only, schema-checked security rules (`firestore.rules`).
+- `GET /api/v1/kcc`: the Kisan Call Centre layer as JSON.
 
-## Deploy on Vercel
+## Run it
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+cd app
+npm install
+cp .env.example .env.local   # add GEMINI_API_KEY (free from Google AI Studio)
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Optional: `FIREBASE_PROJECT_ID` and `FIREBASE_API_KEY` to store audits in Firestore (deploy `firestore.rules` with `firebase deploy --only firestore:rules`). Without them, audits are kept in memory.
+
+### Gemini models (all on the free tier)
+
+| Job | Model | Fallback |
+|---|---|---|
+| Read the chit (image and voice note) | `gemini-3.5-flash-lite` | `gemini-3.1-flash-lite` |
+| Explain in the farmer's language | `gemini-3.5-flash-lite` | `gemini-3.1-flash-lite` |
+| Speak it | `gemini-3.8-flash-lite-tts` | `gemini-3.1-flash-tts-preview`, `gemini-3.8-flash-tts`, then the phone's own voice |
+
+Flash-Lite read our test chits correctly in about 2 seconds and has the most generous free quota. Results and audio are cached, so repeat checks of the same photo don't spend quota. Override with `GEMINI_MODEL`, `GEMINI_TALK_MODEL` and `GEMINI_TTS_MODEL` (comma-separated lists).
+
+## Data and limits
+
+See [`data/SOURCES.md`](data/SOURCES.md). Detailed crop rules cover 22 crops (2,210 approved uses); ban and hazard checks work for every crop. "Not found" means "not confirmed", and the app says so. The inspector dashboard includes a clearly labelled synthetic demo seed (`data/seed_reports.json`, every row has `seed: true`).
+
+The inspector map also has a real-data layer from the Ministry of Agriculture's Kisan Call Centre transcripts (data.gov.in, GODL-India): 226,203 calls dated 2022 to 2024 (a sample of 11 months with data, 35 states and UTs), of which 426 plant-protection calls in 195 districts name a banned, crop-restricted or WHO Class Ia/Ib pesticide, mostly in the adviser's answer. Products that were already banned on the date of the call were named 135 times in advisers' answers (dichlorvos 56, phorate 30, triazophos 23, carbaryl 10 and others; one answer can name more than one). The rows come from a public mirror of the official file because api.data.gov.in was unreachable on the build date. `scripts/kcc_layer.py` rebuilds `data/kcc_layer.json`; method and caveats are in `data/SOURCES.md` section 6. It shows where these products are still being talked about, not sales.
+
+Inspector map: state boundaries from [datameet/maps](https://github.com/datameet/maps) (simplified with mapshaper), drawn without a tile server.
+
+## Beyond India
+
+The engine only needs a national register of approved uses and a banned list. Brazil (Agrofit), South Africa (Act 36 register) and China (ICAMA) publish both, so the same design fits other BRICS countries by swapping the data files.
+
+## Licence
+
+Code: Apache 2.0. Open data feed: CC BY 4.0. Government data remains with its publishers.

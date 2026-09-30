@@ -1,0 +1,536 @@
+{
+ "source": "Brand names are not published by CIB&RC. Mappings are from general Indian market knowledge, spot-checked on 2026-09-30 via web search (Syngenta India product page for Polo; retailer listings for Monocil, Takumi, Padan, Pride). formulation_found_in_cibrc_mup is an automated check that the same active and strength appears in the CIB&RC Major Uses lists (31.03.2026).",
+ "accessed": "2026-09-30",
+ "aliases": [
+  {
+   "brand": "Confidor",
+   "active_ingredient": "imidacloprid",
+   "formulation": "17.8% SL",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Imidacloprid 17.80%SL"
+  },
+  {
+   "brand": "Admire",
+   "active_ingredient": "imidacloprid",
+   "formulation": "70% WG",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Imidacloprid 70%WG"
+  },
+  {
+   "brand": "Tatamida",
+   "active_ingredient": "imidacloprid",
+   "formulation": "17.8% SL",
+   "company": "Rallis (Tata)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Imidacloprid 17.80%SL",
+   "note": "Rallis also sells other Tatamida variants; check the pack"
+  },
+  {
+   "brand": "Coragen",
+   "active_ingredient": "chlorantraniliprole",
+   "formulation": "18.5% SC",
+   "company": "FMC",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Chlorantraniliprole 18.50% SC"
+  },
+  {
+   "brand": "Ferterra",
+   "active_ingredient": "chlorantraniliprole",
+   "formulation": "0.4% GR",
+   "company": "FMC",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Chlorantraniliprole 00.40% GR"
+  },
+  {
+   "brand": "Monocil",
+   "active_ingredient": "monocrotophos",
+   "formulation": "36% SL",
+   "company": "Insecticides (India) Ltd",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": false,
+   "example_cibrc_label": null,
+   "note": "36% SL is being phased out (S.O. 4294(E) 03.10.2023)"
+  },
+  {
+   "brand": "Nuvacron",
+   "active_ingredient": "monocrotophos",
+   "formulation": "36% SL",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": false,
+   "example_cibrc_label": null,
+   "note": "36% SL is being phased out (S.O. 4294(E) 03.10.2023)"
+  },
+  {
+   "brand": "Ulala",
+   "active_ingredient": "flonicamid",
+   "formulation": "50% WG",
+   "company": "UPL",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Flonicamid 50%WG"
+  },
+  {
+   "brand": "Regent",
+   "active_ingredient": "fipronil",
+   "formulation": "5% SC",
+   "company": null,
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Fipronil 05% SC",
+   "note": "Regent also sold as 0.3% GR granules; check pack"
+  },
+  {
+   "brand": "Tracer",
+   "active_ingredient": "spinosad",
+   "formulation": "45% SC",
+   "company": "Corteva (Dow)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Spinosad 45% SC"
+  },
+  {
+   "brand": "Proclaim",
+   "active_ingredient": "emamectin benzoate",
+   "formulation": "5% SG",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Emamectin benzoate 05%SG"
+  },
+  {
+   "brand": "Actara",
+   "active_ingredient": "thiamethoxam",
+   "formulation": "25% WG",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Thiamethoxam 25%WG"
+  },
+  {
+   "brand": "Cruiser",
+   "active_ingredient": "thiamethoxam",
+   "formulation": "70% WS",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": false,
+   "example_cibrc_label": null,
+   "note": "seed treatment"
+  },
+  {
+   "brand": "Takumi",
+   "active_ingredient": "flubendiamide",
+   "formulation": "20% WG",
+   "company": "Rallis (Tata)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Flubendiamide 20% WG"
+  },
+  {
+   "brand": "Fame",
+   "active_ingredient": "flubendiamide",
+   "formulation": "39.35% SC",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Flubendiamide 39.35%w/w SC",
+   "note": "CIB&RC lists flubendiamide 39.35% SC; confirm pack"
+  },
+  {
+   "brand": "Avaunt",
+   "active_ingredient": "indoxacarb",
+   "formulation": "14.5% SC",
+   "company": "FMC",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Indoxacarb 14.50% SC"
+  },
+  {
+   "brand": "Polo",
+   "active_ingredient": "diafenthiuron",
+   "formulation": "50% WP",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Diafenthiuron 50% WP",
+   "note": "confirmed on syngenta.co.in product page"
+  },
+  {
+   "brand": "Pegasus",
+   "active_ingredient": "diafenthiuron",
+   "formulation": "50% WP",
+   "company": "Syngenta",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Diafenthiuron 50% WP",
+   "note": "older Syngenta brand for diafenthiuron; availability not verified"
+  },
+  {
+   "brand": "Oberon",
+   "active_ingredient": "spiromesifen",
+   "formulation": "22.9% SC",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Spiromesifen 22.90% SC"
+  },
+  {
+   "brand": "Dursban",
+   "active_ingredient": "chlorpyrifos",
+   "formulation": "20% EC",
+   "company": "Dow (Corteva)",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Chlorpyrifos 20% EC",
+   "note": "historic brand; current availability not verified"
+  },
+  {
+   "brand": "Asataf",
+   "active_ingredient": "acephate",
+   "formulation": "75% SP",
+   "company": "Rallis (Tata)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Acephate 75%SP"
+  },
+  {
+   "brand": "Rogor",
+   "active_ingredient": "dimethoate",
+   "formulation": "30% EC",
+   "company": null,
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Dimethoate 30% EC",
+   "note": "long-running brand; current marketer not verified"
+  },
+  {
+   "brand": "Ekalux",
+   "active_ingredient": "quinalphos",
+   "formulation": "25% EC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Quinalphos 25 % Gel"
+  },
+  {
+   "brand": "Bavistin",
+   "active_ingredient": "carbendazim",
+   "formulation": "50% WP",
+   "company": "BASF (Crystal)",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Carbendazim 50%WP",
+   "note": "brand ownership changed hands; active and formulation are well established"
+  },
+  {
+   "brand": "Dithane M-45",
+   "active_ingredient": "mancozeb",
+   "formulation": "75% WP",
+   "company": "Indofil / Corteva",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Mancozeb 75% WG",
+   "note": "marketer varies; active and formulation are well established"
+  },
+  {
+   "brand": "Indofil M-45",
+   "active_ingredient": "mancozeb",
+   "formulation": "75% WP",
+   "company": "Indofil",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Mancozeb 75% WG"
+  },
+  {
+   "brand": "Beam",
+   "active_ingredient": "tricyclazole",
+   "formulation": "75% WP",
+   "company": "Corteva (Dow)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Tricyclazole75%WP"
+  },
+  {
+   "brand": "Contaf",
+   "active_ingredient": "hexaconazole",
+   "formulation": "5% EC",
+   "company": "Rallis (Tata)",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Hexaconazole 5% EC",
+   "note": "Contaf Plus is hexaconazole 5% SC; check pack"
+  },
+  {
+   "brand": "Contaf Plus",
+   "active_ingredient": "hexaconazole",
+   "formulation": "5% SC",
+   "company": "Rallis (Tata)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Hexaconazole 5% EC"
+  },
+  {
+   "brand": "Tilt",
+   "active_ingredient": "propiconazole",
+   "formulation": "25% EC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Propiconazole 25% EC"
+  },
+  {
+   "brand": "Amistar",
+   "active_ingredient": "azoxystrobin",
+   "formulation": "23% SC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Azoxystrobin 23% SC"
+  },
+  {
+   "brand": "Blitox",
+   "active_ingredient": "copper oxychloride",
+   "formulation": "50% WP",
+   "company": "Rallis (Tata)",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Copper Oxychloride 50% WG",
+   "note": "sold as Blitox-50"
+  },
+  {
+   "brand": "Applaud",
+   "active_ingredient": "buprofezin",
+   "formulation": "25% SC",
+   "company": "Rallis (Tata)",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Buprofezin 25% SC",
+   "note": "marketer not verified"
+  },
+  {
+   "brand": "Chess",
+   "active_ingredient": "pymetrozine",
+   "formulation": "50% WG",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Pymetrozine 50 %WG"
+  },
+  {
+   "brand": "Pride",
+   "active_ingredient": "acetamiprid",
+   "formulation": "20% SP",
+   "company": null,
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Acetamiprid 20% SP",
+   "note": "many small companies sell acetamiprid 20% SP under \"Pride\" variant names (Universal Pride, SU-Pride, Agri Pride, etc.); treat as acetamiprid only after reading the pack"
+  },
+  {
+   "brand": "Furadan",
+   "active_ingredient": "carbofuran",
+   "formulation": "3% CG",
+   "company": "FMC",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Carbofuran 03%CG",
+   "note": "only 3% CG remains permitted (S.O. 4294(E) 03.10.2023)"
+  },
+  {
+   "brand": "Thimet",
+   "active_ingredient": "phorate",
+   "formulation": "10% CG",
+   "company": null,
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": false,
+   "example_cibrc_label": null,
+   "note": "phorate is BANNED for use in India (S.O. 3951(E) 2018; export-only per S.O. 1196(E) 2020)",
+   "banned": true
+  },
+  {
+   "brand": "Padan",
+   "active_ingredient": "cartap hydrochloride",
+   "formulation": "50% SP",
+   "company": null,
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Cartap Hydrochloride 50% SP",
+   "note": "also sold as Padan 4G granules (cartap hydrochloride 4% GR); check pack"
+  },
+  {
+   "brand": "Caldan",
+   "active_ingredient": "cartap hydrochloride",
+   "formulation": "50% SP",
+   "company": "Dhanuka",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Cartap Hydrochloride 50% SP"
+  },
+  {
+   "brand": "Karate",
+   "active_ingredient": "lambda-cyhalothrin",
+   "formulation": "5% EC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Lambda-cyhalothrin 05% EC"
+  },
+  {
+   "brand": "Curacron",
+   "active_ingredient": "profenofos",
+   "formulation": "50% EC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Profenofos 50%EC"
+  },
+  {
+   "brand": "Delegate",
+   "active_ingredient": "spinetoram",
+   "formulation": "11.7% SC",
+   "company": "Corteva",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Spinetoram 11.70 %SC"
+  },
+  {
+   "brand": "Rimon",
+   "active_ingredient": "novaluron",
+   "formulation": "10% EC",
+   "company": null,
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Novaluron 10 % EC",
+   "note": "marketer not verified"
+  },
+  {
+   "brand": "Larvin",
+   "active_ingredient": "thiodicarb",
+   "formulation": "75% WP",
+   "company": "Bayer",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Thiodicarb 75 % WP",
+   "note": "availability not verified"
+  },
+  {
+   "brand": "Meothrin",
+   "active_ingredient": "fenpropathrin",
+   "formulation": "30% EC",
+   "company": "Sumitomo",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Fenpropathrin 30%EC",
+   "note": "marketer not verified"
+  },
+  {
+   "brand": "Score",
+   "active_ingredient": "difenoconazole",
+   "formulation": "25% EC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Difenoconazole 25% EC"
+  },
+  {
+   "brand": "Kavach",
+   "active_ingredient": "chlorothalonil",
+   "formulation": "75% WP",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Chlorothalonil 75% WP"
+  },
+  {
+   "brand": "Folicur",
+   "active_ingredient": "tebuconazole",
+   "formulation": "25.9% EC",
+   "company": "Bayer",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Tebuconazole 25.9%EC",
+   "note": "formulation strength not verified on pack"
+  },
+  {
+   "brand": "Antracol",
+   "active_ingredient": "propineb",
+   "formulation": "70% WP",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Propineb 70%WP"
+  },
+  {
+   "brand": "Saaf",
+   "active_ingredient": "carbendazim + mancozeb",
+   "formulation": "12% + 63% WP",
+   "company": "UPL",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Carbendazim 12%+ Mancozeb 63% WP"
+  },
+  {
+   "brand": "Nativo",
+   "active_ingredient": "tebuconazole + trifloxystrobin",
+   "formulation": "50% + 25% WG",
+   "company": "Bayer",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Tebuconazole 50% + Trifloxystrobin 25% WG"
+  },
+  {
+   "brand": "Ridomil Gold",
+   "active_ingredient": "metalaxyl-m + mancozeb",
+   "formulation": "4% + 64% WG",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "MetalaxylM 4%+ Mancozeb 64%WP"
+  },
+  {
+   "brand": "Virtako",
+   "active_ingredient": "chlorantraniliprole + thiamethoxam",
+   "formulation": "0.6% + 1% GR",
+   "company": "Syngenta",
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": false,
+   "example_cibrc_label": null,
+   "note": "formulation from memory; confirm on pack"
+  },
+  {
+   "brand": "Alika",
+   "active_ingredient": "thiamethoxam + lambda-cyhalothrin",
+   "formulation": "12.6% + 9.5% ZC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Thiamethoxam12.60%+Lambda-cyhalothrin 09.50% ZC"
+  },
+  {
+   "brand": "Ampligo",
+   "active_ingredient": "chlorantraniliprole + lambda-cyhalothrin",
+   "formulation": "9.3% + 4.6% ZC",
+   "company": "Syngenta",
+   "uncertain": false,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Chlorantraniliprole 09.30%+Lambda-cyhalothrin 04.60% ZC"
+  },
+  {
+   "brand": "Ustaad",
+   "active_ingredient": "cypermethrin",
+   "formulation": "10% EC",
+   "company": null,
+   "uncertain": true,
+   "formulation_found_in_cibrc_mup": true,
+   "example_cibrc_label": "Cypermethrin 10% EC",
+   "note": "brand-to-active mapping not verified"
+  }
+ ]
+}

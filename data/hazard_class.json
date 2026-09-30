@@ -1,0 +1,2346 @@
+{
+ "_meta": {
+  "source": "WHO Recommended Classification of Pesticides by Hazard and Guidelines to Classification, 2019 edition (ISBN 978-92-4-000566-2), https://iris.who.int/handle/10665/332193 ; PDF https://iris.who.int/server/api/core/bitstreams/36c193cd-2362-46d1-be00-fef570d80037/content",
+  "accessed": "2026-09-30",
+  "classes": {
+   "Ia": "Extremely hazardous",
+   "Ib": "Highly hazardous",
+   "II": "Moderately hazardous",
+   "III": "Slightly hazardous",
+   "U": "Unlikely to present acute hazard in normal use",
+   "O": "Listed in Table 6 as obsolete or discontinued as a pesticide (not classified)"
+  },
+  "caveat": "Classes were extracted automatically from the PDF tables by anchoring on CAS numbers; entries matched to a parent compound are marked matched_via_parent. who_class null means not found, not safe. WHO classifies technical grade active ingredients, not formulations."
+ },
+ "2,4-d amine salt": {
+  "who_class": "II",
+  "who_listed_name": "2,4-D",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"2,4-D\", CAS 94-75-7, pdf p.34; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "2,4-d dimethyl amine salt": {
+  "who_class": "II",
+  "who_listed_name": "2,4-D",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"2,4-D\", CAS 94-75-7, pdf p.34; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "2,4-d ethyl ester": {
+  "who_class": "II",
+  "who_listed_name": "2,4-D",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"2,4-D\", CAS 94-75-7, pdf p.34; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "2,4-d sodium salt": {
+  "who_class": "II",
+  "who_listed_name": "2,4-D",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"2,4-D\", CAS 94-75-7, pdf p.34; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "abamectin": {
+  "who_class": "Ib",
+  "who_listed_name": "Abamectin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Abamectin\", CAS 71751-41-2, pdf p.27",
+  "in_registered_uses": true
+ },
+ "acephate": {
+  "who_class": "II",
+  "who_listed_name": "Acephate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Acephate\", CAS 30560-19-1, pdf p.31",
+  "in_registered_uses": true
+ },
+ "acequinocyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "acetamiprid": {
+  "who_class": "II",
+  "who_listed_name": "Acetamiprid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Acetamiprid\", CAS 135410-20-7, pdf p.31",
+  "in_registered_uses": true
+ },
+ "aclonifen": {
+  "who_class": "U",
+  "who_listed_name": "Aclonifen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Aclonifen\", CAS 74070-46-5, pdf p.53",
+  "in_registered_uses": true
+ },
+ "acynonapyr": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "afidopyropen": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "alachlor": {
+  "who_class": "II",
+  "who_listed_name": "Alachlor",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Alachlor\", CAS 15972-60-8, pdf p.31. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "aldicarb": {
+  "who_class": "Ia",
+  "who_listed_name": "Aldicarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Aldicarb\", CAS 116-06-3, pdf p.25. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "alpha-cypermethrin": {
+  "who_class": "II",
+  "who_listed_name": "Alpha-cypermethrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Alpha-cypermethrin\", CAS 67375-30-8, pdf p.33",
+  "in_registered_uses": true
+ },
+ "aluminium phosphide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 by automated name match (fumigants are in Table 8, not parsed).",
+  "in_registered_uses": false
+ },
+ "ametoctradin": {
+  "who_class": "III",
+  "who_listed_name": "Ametoctradin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Ametoctradin\", CAS 865318-97-4, pdf p.45",
+  "in_registered_uses": true
+ },
+ "ametryn": {
+  "who_class": "II",
+  "who_listed_name": "Ametryn",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Ametryn\", CAS 834-12-8, pdf p.31",
+  "in_registered_uses": true
+ },
+ "amisulbrom": {
+  "who_class": "U",
+  "who_listed_name": "Amisulbrom",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Amisulbrom\", CAS 348635-87-0, pdf p.53",
+  "in_registered_uses": true
+ },
+ "ampelomyces quisqualis": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "anilofos": {
+  "who_class": "II",
+  "who_listed_name": "Anilofos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Anilofos\", CAS 64249-01-0, pdf p.31",
+  "in_registered_uses": true
+ },
+ "atrazine": {
+  "who_class": "III",
+  "who_listed_name": "Atrazine",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Atrazine\", CAS 1912-24-9, pdf p.45",
+  "in_registered_uses": true
+ },
+ "aureofungin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "azadirachtin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "azimsulfuron": {
+  "who_class": "U",
+  "who_listed_name": "Azimsulfuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Azimsulfuron\", CAS 120162-55-2, pdf p.53",
+  "in_registered_uses": true
+ },
+ "azoxystrobin": {
+  "who_class": "U",
+  "who_listed_name": "Azoxystrobin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Azoxystrobin\", CAS 131860-33-8, pdf p.53",
+  "in_registered_uses": true
+ },
+ "bacillus firmus": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "bacillus subtilis": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "bacillus thuringiensis var. galleriae": {
+  "who_class": "III",
+  "who_listed_name": "Bacillus thuringiensis (Bt)",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Bacillus thuringiensis (Bt)\", CAS 68038-71-1, pdf p.45; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "bacillus thuringiensis var. israelensis": {
+  "who_class": "III",
+  "who_listed_name": "Bacillus thuringiensis (Bt)",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Bacillus thuringiensis (Bt)\", CAS 68038-71-1, pdf p.45; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "bacillus thuringiensis var. kurstaki": {
+  "who_class": "III",
+  "who_listed_name": "Bacillus thuringiensis (Bt)",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Bacillus thuringiensis (Bt)\", CAS 68038-71-1, pdf p.45; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "barium carbonate": {
+  "who_class": "O",
+  "who_listed_name": "Barium carbonate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 6 (O (obsolete/discontinued, Table 6)), listed as \"Barium carbonate\", CAS 513-77-9, pdf p.63",
+  "in_registered_uses": true
+ },
+ "beauveria bassiana": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "beflubutamid": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "benalaxyl": {
+  "who_class": "III",
+  "who_listed_name": "Benalaxyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Benalaxyl\", CAS 71626-11-4, pdf p.45",
+  "in_registered_uses": true
+ },
+ "benalaxyl-m": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "benfuracarb": {
+  "who_class": "II",
+  "who_listed_name": "Benfuracarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Benfuracarb\", CAS 82560-54-1, pdf p.31",
+  "in_registered_uses": true
+ },
+ "benomyl": {
+  "who_class": "U",
+  "who_listed_name": "Benomyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Benomyl\", CAS 17804-35-2, pdf p.53. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "bensulfuron-methyl": {
+  "who_class": "U",
+  "who_listed_name": "Bensulfuron-methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Bensulfuron-methyl\", CAS 83055-99-6, pdf p.53",
+  "in_registered_uses": true
+ },
+ "bentazone": {
+  "who_class": "II",
+  "who_listed_name": "Bentazone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Bentazone\", CAS 25057-89-0, pdf p.31",
+  "in_registered_uses": true
+ },
+ "benzpyrimoxan": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "beta-cyfluthrin": {
+  "who_class": "Ib",
+  "who_listed_name": "Beta-cyfluthrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Beta-cyfluthrin\", CAS 1820573-27-0, pdf p.27",
+  "in_registered_uses": true
+ },
+ "bifenazate": {
+  "who_class": "U",
+  "who_listed_name": "Bifenazate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Bifenazate\", CAS 149877-41-8, pdf p.53",
+  "in_registered_uses": true
+ },
+ "bifenthrin": {
+  "who_class": "II",
+  "who_listed_name": "Bifenthrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Bifenthrin\", CAS 82657-04-3, pdf p.31",
+  "in_registered_uses": true
+ },
+ "bispyribac-sodium": {
+  "who_class": "III",
+  "who_listed_name": "Bispyribac",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Bispyribac\", CAS 125401-75-4, pdf p.45; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "bitertanol": {
+  "who_class": "U",
+  "who_listed_name": "Bitertanol",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Bitertanol\", CAS 55179-31-2, pdf p.53",
+  "in_registered_uses": true
+ },
+ "bixlozone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "boscalid": {
+  "who_class": "U",
+  "who_listed_name": "Boscalid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Boscalid\", CAS 188425-85-6, pdf p.53",
+  "in_registered_uses": true
+ },
+ "broflanilide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "bromadiolone": {
+  "who_class": "Ia",
+  "who_listed_name": "Bromadiolone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Bromadiolone\", CAS 28772-56-7, pdf p.25",
+  "in_registered_uses": true
+ },
+ "bupirimate": {
+  "who_class": "III",
+  "who_listed_name": "Bupirimate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Bupirimate\", CAS 41483-43-6, pdf p.45",
+  "in_registered_uses": true
+ },
+ "buprofezin": {
+  "who_class": "III",
+  "who_listed_name": "Buprofezin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Buprofezin\", CAS 69327-76-0, pdf p.45",
+  "in_registered_uses": true
+ },
+ "butachlor": {
+  "who_class": "III",
+  "who_listed_name": "Butachlor",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Butachlor\", CAS 23184-66-9, pdf p.45",
+  "in_registered_uses": true
+ },
+ "captafol": {
+  "who_class": "Ia",
+  "who_listed_name": "Captafol",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Captafol\", CAS 2425-06-1, pdf p.25. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "captan": {
+  "who_class": "U",
+  "who_listed_name": "Captan",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Captan\", CAS 133-06-2, pdf p.54",
+  "in_registered_uses": true
+ },
+ "carbaryl": {
+  "who_class": "II",
+  "who_listed_name": "Carbaryl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Carbaryl\", CAS 63-25-2, pdf p.32. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "carbendazim": {
+  "who_class": "U",
+  "who_listed_name": "Carbendazim",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Carbendazim\", CAS 10605-21-7, pdf p.54",
+  "in_registered_uses": true
+ },
+ "carbofuran": {
+  "who_class": "Ib",
+  "who_listed_name": "Carbofuran",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Carbofuran\", CAS 1563-66-2, pdf p.27",
+  "in_registered_uses": true
+ },
+ "carbosulfan": {
+  "who_class": "II",
+  "who_listed_name": "Carbosulfan",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Carbosulfan\", CAS 55285-14-8, pdf p.32",
+  "in_registered_uses": true
+ },
+ "carboxin": {
+  "who_class": "III",
+  "who_listed_name": "Carboxin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Carboxin\", CAS 5234-68-4, pdf p.45",
+  "in_registered_uses": true
+ },
+ "carfentrazone-ethyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "carpropamid": {
+  "who_class": "U",
+  "who_listed_name": "Carpropamid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Carpropamid\", CAS 104030-54-8, pdf p.54",
+  "in_registered_uses": true
+ },
+ "cartap hydrochloride": {
+  "who_class": "II",
+  "who_listed_name": "Cartap",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Cartap\", CAS 15263-53-3, pdf p.32; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "chlorantraniliprole": {
+  "who_class": "U",
+  "who_listed_name": "Chlorantraniliprole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Chlorantraniliprole\", CAS 500008-45-7, pdf p.54",
+  "in_registered_uses": true
+ },
+ "chlorfenapyr": {
+  "who_class": "II",
+  "who_listed_name": "Chlorfenapyr",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Chlorfenapyr\", CAS 122453-73-0, pdf p.32",
+  "in_registered_uses": true
+ },
+ "chlorfluazuron": {
+  "who_class": "U",
+  "who_listed_name": "Chlorfluazuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Chlorfluazuron\", CAS 71422-67-8, pdf p.54",
+  "in_registered_uses": true
+ },
+ "chlorimuron-ethyl": {
+  "who_class": "III",
+  "who_listed_name": "Chlorimuron",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Chlorimuron\", CAS 99283-00-8, pdf p.46; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "chlorothalonil": {
+  "who_class": "U",
+  "who_listed_name": "Chlorothalonil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Chlorothalonil\", CAS 1897-45-6, pdf p.54",
+  "in_registered_uses": true
+ },
+ "chlorpyrifos": {
+  "who_class": "II",
+  "who_listed_name": "Chlorpyrifos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Chlorpyrifos\", CAS 2921-88-2, pdf p.33",
+  "in_registered_uses": true
+ },
+ "chromafenozide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "cinmethylin": {
+  "who_class": "III",
+  "who_listed_name": "Cinmethylin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Cinmethylin\", CAS 87818-31-3, pdf p.46",
+  "in_registered_uses": true
+ },
+ "clethodim": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "clodinafop-propargyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "clomazone": {
+  "who_class": "II",
+  "who_listed_name": "Clomazone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Clomazone\", CAS 81777-89-1, pdf p.33",
+  "in_registered_uses": true
+ },
+ "clothianidin": {
+  "who_class": "II",
+  "who_listed_name": "Clothianidin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Clothianidin\", CAS 210880-92-5, pdf p.33",
+  "in_registered_uses": true
+ },
+ "copper hydroxide": {
+  "who_class": "II",
+  "who_listed_name": "Copper hydroxide",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Copper hydroxide\", CAS 20427-59-2, pdf p.33",
+  "in_registered_uses": true
+ },
+ "copper oxychloride": {
+  "who_class": "II",
+  "who_listed_name": "Copper oxychloride",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Copper oxychloride\", CAS 1332-40-7, pdf p.33",
+  "in_registered_uses": true
+ },
+ "copper sulphate": {
+  "who_class": "II",
+  "who_listed_name": "Copper sulfate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Copper sulfate\", CAS 7758-98-7, pdf p.33; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "copper sulphate pentahydrate": {
+  "who_class": "II",
+  "who_listed_name": "Copper sulfate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Copper sulfate\", CAS 7758-98-7, pdf p.33; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "coumatetralyl": {
+  "who_class": "Ib",
+  "who_listed_name": "Coumatetralyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Coumatetralyl\", CAS 5836-29-3, pdf p.27",
+  "in_registered_uses": true
+ },
+ "cyantraniliprole": {
+  "who_class": "U",
+  "who_listed_name": "Cyantraniliprole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Cyantraniliprole\", CAS 736994-63-1, pdf p.54",
+  "in_registered_uses": true
+ },
+ "cyazofamid": {
+  "who_class": "U",
+  "who_listed_name": "Cyazofamid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Cyazofamid\", CAS 120116-88-3, pdf p.55",
+  "in_registered_uses": true
+ },
+ "cyclaniliprole": {
+  "who_class": "III",
+  "who_listed_name": "Cyclaniliprole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Cyclaniliprole\", CAS 1031756-98-5, pdf p.46",
+  "in_registered_uses": true
+ },
+ "cyclobutrifluram": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "cyenopyrafen": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "cyflufenamid": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "cyflumetofen": {
+  "who_class": "III",
+  "who_listed_name": "Cyflumetofen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Cyflumetofen\", CAS 400882-07-7, pdf p.46",
+  "in_registered_uses": true
+ },
+ "cyhalofop-butyl": {
+  "who_class": "U",
+  "who_listed_name": "Cyhalofop",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Cyhalofop\", CAS 122008-85-9, pdf p.55; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "cymoxanil": {
+  "who_class": "II",
+  "who_listed_name": "Cymoxanil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Cymoxanil\", CAS 57966-95-7, pdf p.33",
+  "in_registered_uses": true
+ },
+ "cypermethrin": {
+  "who_class": "II",
+  "who_listed_name": "Cypermethrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Cypermethrin\", CAS 52315-07-8, pdf p.33",
+  "in_registered_uses": true
+ },
+ "cyproconazole": {
+  "who_class": "II",
+  "who_listed_name": "Cyproconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Cyproconazole\", CAS 94361-06-5, pdf p.34",
+  "in_registered_uses": true
+ },
+ "dazomet": {
+  "who_class": "II",
+  "who_listed_name": "Dazomet",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dazomet\", CAS 533-74-4, pdf p.34. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "ddt": {
+  "who_class": "II",
+  "who_listed_name": "DDT",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"DDT\", CAS 50-29-3, pdf p.34. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "deltamethrin": {
+  "who_class": "II",
+  "who_listed_name": "Deltamethrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Deltamethrin\", CAS 52918-63-5, pdf p.34",
+  "in_registered_uses": true
+ },
+ "diafenthiuron": {
+  "who_class": "III",
+  "who_listed_name": "Diafenthiuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Diafenthiuron\", CAS 80060-09-9, pdf p.46",
+  "in_registered_uses": true
+ },
+ "diazinon": {
+  "who_class": "II",
+  "who_listed_name": "Diazinon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Diazinon\", CAS 333-41-5, pdf p.34. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "dicamba": {
+  "who_class": "II",
+  "who_listed_name": "Dicamba",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dicamba\", CAS 1918-00-9, pdf p.34",
+  "in_registered_uses": true
+ },
+ "dichlorvos": {
+  "who_class": "Ib",
+  "who_listed_name": "Dichlorvos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Dichlorvos\", CAS 62-73-7, pdf p.28. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "diclofop-methyl": {
+  "who_class": "II",
+  "who_listed_name": "Diclofop",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Diclofop\", CAS 40843-25-2, pdf p.34; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "diclosulam": {
+  "who_class": "U",
+  "who_listed_name": "Diclosulam",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Diclosulam\", CAS 145701-21-9, pdf p.55",
+  "in_registered_uses": true
+ },
+ "dicofol": {
+  "who_class": "II",
+  "who_listed_name": "Dicofol",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dicofol\", CAS 115-32-2, pdf p.34. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "difenoconazole": {
+  "who_class": "II",
+  "who_listed_name": "Difenoconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Difenoconazole\", CAS 119446-68-3, pdf p.34",
+  "in_registered_uses": true
+ },
+ "diflubenzuron": {
+  "who_class": "III",
+  "who_listed_name": "Diflubenzuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Diflubenzuron\", CAS 35367-38-5, pdf p.46",
+  "in_registered_uses": true
+ },
+ "diflufenican": {
+  "who_class": "III",
+  "who_listed_name": "Diflufenican",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Diflufenican\", CAS 83164-33-4, pdf p.46",
+  "in_registered_uses": true
+ },
+ "dimethenamid-p": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "dimethoate": {
+  "who_class": "II",
+  "who_listed_name": "Dimethoate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dimethoate\", CAS 60-51-5, pdf p.35",
+  "in_registered_uses": true
+ },
+ "dimethomorph": {
+  "who_class": "III",
+  "who_listed_name": "Dimethomorph",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Dimethomorph\", CAS 110488-70-5, pdf p.47",
+  "in_registered_uses": true
+ },
+ "dimpropyridaz": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "dinocap": {
+  "who_class": "II",
+  "who_listed_name": "Dinocap",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dinocap\", CAS 39300-45-3, pdf p.35",
+  "in_registered_uses": true
+ },
+ "dinotefuran": {
+  "who_class": "III",
+  "who_listed_name": "Dinotefuran",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Dinotefuran\", CAS 165252-70-0, pdf p.47",
+  "in_registered_uses": true
+ },
+ "dithianon": {
+  "who_class": "II",
+  "who_listed_name": "Dithianon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dithianon\", CAS 3347-22-6, pdf p.35",
+  "in_registered_uses": true
+ },
+ "diuron": {
+  "who_class": "III",
+  "who_listed_name": "Diuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Diuron\", CAS 330-54-1, pdf p.47",
+  "in_registered_uses": true
+ },
+ "dodine": {
+  "who_class": "II",
+  "who_listed_name": "Dodine",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Dodine\", CAS 2439-10-3, pdf p.35",
+  "in_registered_uses": true
+ },
+ "ediphenphos": {
+  "who_class": "Ib",
+  "who_listed_name": "Edifenphos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Edifenphos\", CAS 17109-49-8, pdf p.28; spelling synonym of the WHO name",
+  "in_registered_uses": true
+ },
+ "emamectin benzoate": {
+  "who_class": "II",
+  "who_listed_name": "Emamectin Benzoate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Emamectin Benzoate\", CAS 155569-91-8, pdf p.35",
+  "in_registered_uses": true
+ },
+ "endosulfan": {
+  "who_class": "II",
+  "who_listed_name": "Endosulfan",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Endosulfan\", CAS 115-29-7, pdf p.35. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "epoxiconazole": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "ethaboxam": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "ethalfluralin": {
+  "who_class": "U",
+  "who_listed_name": "Ethalfluralin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Ethalfluralin\", CAS 55283-68-6, pdf p.55",
+  "in_registered_uses": true
+ },
+ "ethion": {
+  "who_class": "II",
+  "who_listed_name": "Ethion",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Ethion\", CAS 563-12-2, pdf p.35",
+  "in_registered_uses": true
+ },
+ "ethiprole": {
+  "who_class": "U",
+  "who_listed_name": "Ethiprole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Ethiprole\", CAS 181587-01-9, pdf p.55",
+  "in_registered_uses": true
+ },
+ "ethofenoprox": {
+  "who_class": "U",
+  "who_listed_name": "Etofenprox",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Etofenprox\", CAS 80844-07-1, pdf p.56; spelling synonym of the WHO name",
+  "in_registered_uses": true
+ },
+ "ethoxysulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "etoxazole": {
+  "who_class": "III",
+  "who_listed_name": "Etoxazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Etoxazole\", CAS 153233-91-1, pdf p.47",
+  "in_registered_uses": true
+ },
+ "famoxadone": {
+  "who_class": "U",
+  "who_listed_name": "Famoxadone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Famoxadone\", CAS 131807-57-3, pdf p.56",
+  "in_registered_uses": true
+ },
+ "fenamidone": {
+  "who_class": "III",
+  "who_listed_name": "Fenamidone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Fenamidone\", CAS 161326-34-7, pdf p.47",
+  "in_registered_uses": true
+ },
+ "fenazaquin": {
+  "who_class": "II",
+  "who_listed_name": "Fenazaquin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenazaquin\", CAS 120928-09-8, pdf p.35",
+  "in_registered_uses": true
+ },
+ "fenitrothion": {
+  "who_class": "II",
+  "who_listed_name": "Fenitrothion",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenitrothion\", CAS 122-14-5, pdf p.35. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "fenmezoditiaz": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "fenobucarb": {
+  "who_class": "II",
+  "who_listed_name": "Fenobucarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenobucarb\", CAS 3766-81-2, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fenoxaprop-p-ethyl": {
+  "who_class": "III",
+  "who_listed_name": "Fenoxaprop-p-ethyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Fenoxaprop-p-ethyl\", CAS 71283-80-2, pdf p.47",
+  "in_registered_uses": true
+ },
+ "fenpropathrin": {
+  "who_class": "II",
+  "who_listed_name": "Fenpropathrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenpropathrin\", CAS 39515-41-8, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fenpyroximate": {
+  "who_class": "II",
+  "who_listed_name": "Fenpyroximate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenpyroximate\", CAS 134098-61-6, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fenthion": {
+  "who_class": "II",
+  "who_listed_name": "Fenthion",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenthion\", CAS 55-38-9, pdf p.36. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "fenvalerate": {
+  "who_class": "II",
+  "who_listed_name": "Fenvalerate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fenvalerate\", CAS 51630-58-1, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fipronil": {
+  "who_class": "II",
+  "who_listed_name": "Fipronil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fipronil\", CAS 120068-37-3, pdf p.36",
+  "in_registered_uses": true
+ },
+ "flazasulfuron": {
+  "who_class": "III",
+  "who_listed_name": "Flazasulfuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Flazasulfuron\", CAS 104040-78-0, pdf p.48",
+  "in_registered_uses": true
+ },
+ "flocoumafen": {
+  "who_class": "Ia",
+  "who_listed_name": "Flocoumafen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Flocoumafen\", CAS 90035-08-8, pdf p.25",
+  "in_registered_uses": true
+ },
+ "flometoquin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "flonicamid": {
+  "who_class": "II",
+  "who_listed_name": "Flonicamid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Flonicamid\", CAS 158062-67-0, pdf p.36",
+  "in_registered_uses": true
+ },
+ "florasulam": {
+  "who_class": "U",
+  "who_listed_name": "Florasulam",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Florasulam\", CAS 145701-23-1, pdf p.56",
+  "in_registered_uses": true
+ },
+ "florpyrauxifen-benzyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "fluazifop-p-butyl": {
+  "who_class": "III",
+  "who_listed_name": "Fluazifop-p-butyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Fluazifop-p-butyl\", CAS 79241-46-6, pdf p.48",
+  "in_registered_uses": true
+ },
+ "flubendiamide": {
+  "who_class": "III",
+  "who_listed_name": "Flubendiamide",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Flubendiamide\", CAS 272451-65-7, pdf p.48",
+  "in_registered_uses": true
+ },
+ "flucetosulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "fluchloralin": {
+  "who_class": "II",
+  "who_listed_name": "Fluchloralin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fluchloralin\", CAS 33245-39-5, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fludioxonil": {
+  "who_class": "U",
+  "who_listed_name": "Fludioxonil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fludioxonil\", CAS 131341-86-1, pdf p.56",
+  "in_registered_uses": true
+ },
+ "fluensulfone": {
+  "who_class": "II",
+  "who_listed_name": "Fluensulfone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fluensulfone\", CAS 318290-98-1, pdf p.36",
+  "in_registered_uses": true
+ },
+ "flufenacet": {
+  "who_class": "II",
+  "who_listed_name": "Flufenacet",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Flufenacet\", CAS 142459-58-3, pdf p.36",
+  "in_registered_uses": true
+ },
+ "flufenoxuron": {
+  "who_class": "III",
+  "who_listed_name": "Flufenoxuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Flufenoxuron\", CAS 101463-69-8, pdf p.48",
+  "in_registered_uses": true
+ },
+ "flufenzine (flumite)": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "flumioxazin": {
+  "who_class": "III",
+  "who_listed_name": "Flumioxazin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Flumioxazin\", CAS 103361-09-7, pdf p.48",
+  "in_registered_uses": true
+ },
+ "fluopicolide": {
+  "who_class": "U",
+  "who_listed_name": "Fluopicolide",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fluopicolide\", CAS 239110-15-7, pdf p.56",
+  "in_registered_uses": true
+ },
+ "fluopyram": {
+  "who_class": "III",
+  "who_listed_name": "Fluopyram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Fluopyram\", CAS 658066-35-4, pdf p.48",
+  "in_registered_uses": true
+ },
+ "flupyradifurone": {
+  "who_class": "II",
+  "who_listed_name": "Flupyradifurone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Flupyradifurone\", CAS 951659-40-8, pdf p.36",
+  "in_registered_uses": true
+ },
+ "flupyrimin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "fluroxypyr": {
+  "who_class": "U",
+  "who_listed_name": "Fluroxypyr",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fluroxypyr\", CAS 69377-81-7, pdf p.57",
+  "in_registered_uses": true
+ },
+ "fluroxypyr-meptyl": {
+  "who_class": "U",
+  "who_listed_name": "Fluroxypyr",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fluroxypyr\", CAS 69377-81-7, pdf p.57; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "flusilazole": {
+  "who_class": "II",
+  "who_listed_name": "Flusilazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Flusilazole\", CAS 85509-19-9, pdf p.36",
+  "in_registered_uses": true
+ },
+ "fluthiacet-methyl": {
+  "who_class": "U",
+  "who_listed_name": "Fluthiacet",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fluthiacet\", CAS 149253-65-6, pdf p.57; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "flutriafol": {
+  "who_class": "II",
+  "who_listed_name": "Flutriafol",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Flutriafol\", CAS 76674-21-0, pdf p.37",
+  "in_registered_uses": true
+ },
+ "fluvalinate": {
+  "who_class": "II",
+  "who_listed_name": "Fluvalinate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fluvalinate\", CAS 69409-94-5, pdf p.37",
+  "in_registered_uses": true
+ },
+ "fluxametamide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "fluxapyroxad": {
+  "who_class": "III",
+  "who_listed_name": "Fluxapyroxad",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Fluxapyroxad\", CAS 907204-31-3, pdf p.48",
+  "in_registered_uses": true
+ },
+ "fomesafen": {
+  "who_class": "II",
+  "who_listed_name": "Fomesafen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Fomesafen\", CAS 72178-02-0, pdf p.37",
+  "in_registered_uses": true
+ },
+ "fosetyl-al": {
+  "who_class": "U",
+  "who_listed_name": "Fosetyl",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Fosetyl\", CAS 15845-66-2, pdf p.57; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "glufosinate ammonium": {
+  "who_class": "II",
+  "who_listed_name": "Glufosinate-ammonium",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Glufosinate-ammonium\", CAS 77182-82-2, pdf p.37",
+  "in_registered_uses": true
+ },
+ "glyphosate": {
+  "who_class": "III",
+  "who_listed_name": "Glyphosate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Glyphosate\", CAS 1071-83-6, pdf p.48",
+  "in_registered_uses": true
+ },
+ "glyphosate ammonium salt": {
+  "who_class": "III",
+  "who_listed_name": "Glyphosate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Glyphosate\", CAS 1071-83-6, pdf p.48; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "glyphosate isopropylamine salt": {
+  "who_class": "III",
+  "who_listed_name": "Glyphosate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Glyphosate\", CAS 1071-83-6, pdf p.48; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "glyphosate potassium salt": {
+  "who_class": "III",
+  "who_listed_name": "Glyphosate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 4 (III), listed as \"Glyphosate\", CAS 1071-83-6, pdf p.48; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "halauxifen-methyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "halosulfuron-methyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "haloxyfop-r-methyl": {
+  "who_class": "II",
+  "who_listed_name": "Haloxyfop",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Haloxyfop\", CAS 69806-34-4, pdf p.37; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "helicoverpa armigera npv": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "hexaconazole": {
+  "who_class": "III",
+  "who_listed_name": "Hexaconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Hexaconazole\", CAS 79983-71-4, pdf p.48",
+  "in_registered_uses": true
+ },
+ "hexazinone": {
+  "who_class": "II",
+  "who_listed_name": "Hexazinone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Hexazinone\", CAS 51235-04-2, pdf p.37",
+  "in_registered_uses": true
+ },
+ "hexythiazox": {
+  "who_class": "U",
+  "who_listed_name": "Hexythiazox",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Hexythiazox\", CAS 78587-05-0, pdf p.57",
+  "in_registered_uses": true
+ },
+ "imazamox": {
+  "who_class": "III",
+  "who_listed_name": "Imazamox",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Imazamox\", CAS 114311-32-9, pdf p.48",
+  "in_registered_uses": true
+ },
+ "imazethapyr": {
+  "who_class": "U",
+  "who_listed_name": "Imazethapyr",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Imazethapyr\", CAS 81335-77-5, pdf p.57",
+  "in_registered_uses": true
+ },
+ "imazosulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "imidacloprid": {
+  "who_class": "II",
+  "who_listed_name": "Imidacloprid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Imidacloprid\", CAS 138261-41-3, pdf p.37",
+  "in_registered_uses": true
+ },
+ "indaziflam": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "indoxacarb": {
+  "who_class": "II",
+  "who_listed_name": "Indoxacarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Indoxacarb\", CAS 173584-44-6, pdf p.37",
+  "in_registered_uses": true
+ },
+ "iodosulfuron methyl sodium": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "ipfencarbazone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "ipflufenoquin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "iprobenfos (kitazin)": {
+  "who_class": "II",
+  "who_listed_name": "Iprobenfos",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Iprobenfos\", CAS 26087-47-8, pdf p.38; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "iprodione": {
+  "who_class": "III",
+  "who_listed_name": "Iprodione",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Iprodione\", CAS 36734-19-7, pdf p.48",
+  "in_registered_uses": true
+ },
+ "iprovalicarb": {
+  "who_class": "U",
+  "who_listed_name": "Iprovalicarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Iprovalicarb\", CAS 140923-17-7, pdf p.57",
+  "in_registered_uses": true
+ },
+ "isocycloseram": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "isoprothiolane": {
+  "who_class": "II",
+  "who_listed_name": "Isoprothiolane",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Isoprothiolane\", CAS 50512-35-1, pdf p.38",
+  "in_registered_uses": true
+ },
+ "isoproturon": {
+  "who_class": "II",
+  "who_listed_name": "Isoproturon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Isoproturon\", CAS 34123-59-6, pdf p.38",
+  "in_registered_uses": true
+ },
+ "isopyrazam": {
+  "who_class": "II",
+  "who_listed_name": "Isopyrazam",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Isopyrazam\", CAS 881685-58-1, pdf p.38",
+  "in_registered_uses": true
+ },
+ "kasugamycin": {
+  "who_class": "U",
+  "who_listed_name": "Kasugamycin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Kasugamycin\", CAS 19408-46-9, pdf p.57",
+  "in_registered_uses": true
+ },
+ "kresoxim-methyl": {
+  "who_class": "III",
+  "who_listed_name": "Kresoxim-methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Kresoxim-methyl\", CAS 143390-89-0, pdf p.49",
+  "in_registered_uses": true
+ },
+ "lambda-cyhalothrin": {
+  "who_class": "II",
+  "who_listed_name": "Lambda-cyhalothrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Lambda-cyhalothrin\", CAS 91465-08-6, pdf p.33",
+  "in_registered_uses": true
+ },
+ "lecanicillium lecanii (verticillium lecanii)": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "lime sulphur": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "lufenuron": {
+  "who_class": "III",
+  "who_listed_name": "Lufenuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Lufenuron\", CAS 103055-07-8, pdf p.49",
+  "in_registered_uses": true
+ },
+ "malathion": {
+  "who_class": "III",
+  "who_listed_name": "Malathion",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Malathion\", CAS 121-75-5, pdf p.49",
+  "in_registered_uses": true
+ },
+ "mancozeb": {
+  "who_class": "U",
+  "who_listed_name": "Mancozeb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Mancozeb\", CAS 8018-01-7, pdf p.58",
+  "in_registered_uses": true
+ },
+ "mandipropamid": {
+  "who_class": "U",
+  "who_listed_name": "Mandipropamid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Mandipropamid\", CAS 374726-62-2, pdf p.58",
+  "in_registered_uses": true
+ },
+ "mcpa, amine salt": {
+  "who_class": "II",
+  "who_listed_name": "MCPA",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"MCPA\", CAS 94-74-6, pdf p.38; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "mefentrifluconazole": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "mepiquat chloride": {
+  "who_class": "II",
+  "who_listed_name": "Mepiquat",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Mepiquat\", CAS 15302-91-7, pdf p.38; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "meptyl dinocap": {
+  "who_class": "III",
+  "who_listed_name": "Meptyldinocap",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Meptyldinocap\", CAS 131-72-6, pdf p.49",
+  "in_registered_uses": true
+ },
+ "mesosulfuron-methyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "mesotrione": {
+  "who_class": "III",
+  "who_listed_name": "Mesotrione",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Mesotrione\", CAS 104206-82-8, pdf p.49",
+  "in_registered_uses": true
+ },
+ "metaflumizone": {
+  "who_class": "U",
+  "who_listed_name": "Metaflumizone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Metaflumizone\", CAS 139968-49-3, pdf p.58",
+  "in_registered_uses": true
+ },
+ "metalaxyl": {
+  "who_class": "II",
+  "who_listed_name": "Metalaxyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Metalaxyl\", CAS 57837-19-1, pdf p.38",
+  "in_registered_uses": true
+ },
+ "metalaxyl-m": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "metamifop": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "metarhizium anisopliae": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "metazosulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "methabenzthiazuron": {
+  "who_class": "III",
+  "who_listed_name": "Methabenzthiazuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Methabenzthiazuron\", CAS 18691-97-9, pdf p.49",
+  "in_registered_uses": true
+ },
+ "methomyl": {
+  "who_class": "Ib",
+  "who_listed_name": "Methomyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Methomyl\", CAS 16752-77-5, pdf p.29. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "methoxyfenozide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "methyl bromide": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 by automated name match (fumigants are in Table 8, not parsed).",
+  "in_registered_uses": false
+ },
+ "methyl parathion": {
+  "who_class": "Ia",
+  "who_listed_name": "Parathion-methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Parathion-methyl\", CAS 298-00-0, pdf p.26; spelling synonym. Banned in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "metiram": {
+  "who_class": "U",
+  "who_listed_name": "Metiram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Metiram\", CAS 9006-42-2, pdf p.58",
+  "in_registered_uses": true
+ },
+ "metolachlor": {
+  "who_class": "III",
+  "who_listed_name": "Metolachlor",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Metolachlor\", CAS 51218-45-2, pdf p.49",
+  "in_registered_uses": true
+ },
+ "metrafenone": {
+  "who_class": "U",
+  "who_listed_name": "Metrafenone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Metrafenone\", CAS 220899-03-6, pdf p.58",
+  "in_registered_uses": true
+ },
+ "metribuzin": {
+  "who_class": "II",
+  "who_listed_name": "Metribuzin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Metribuzin\", CAS 21087-64-9, pdf p.39",
+  "in_registered_uses": true
+ },
+ "metsulfuron-methyl": {
+  "who_class": "U",
+  "who_listed_name": "Metsulfuron methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Metsulfuron methyl\", CAS 74223-64-6, pdf p.58",
+  "in_registered_uses": true
+ },
+ "milbemectin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "monocrotophos": {
+  "who_class": "Ib",
+  "who_listed_name": "Monocrotophos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Monocrotophos\", CAS 6923-22-4, pdf p.29",
+  "in_registered_uses": true
+ },
+ "myclobutanil": {
+  "who_class": "II",
+  "who_listed_name": "Myclobutanil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Myclobutanil\", CAS 88671-89-0, pdf p.39",
+  "in_registered_uses": true
+ },
+ "nitenpyram": {
+  "who_class": "II",
+  "who_listed_name": "Nitenpyram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Nitenpyram\", CAS 150824-47-8, pdf p.39",
+  "in_registered_uses": true
+ },
+ "novaluron": {
+  "who_class": "U",
+  "who_listed_name": "Novaluron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Novaluron\", CAS 116714-46-6, pdf p.59",
+  "in_registered_uses": true
+ },
+ "npv (nuclear polyhedrosis virus)": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "orthosulfamuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "oxadiargyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "oxadiazon": {
+  "who_class": "U",
+  "who_listed_name": "Oxadiazon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Oxadiazon\", CAS 19666-30-9, pdf p.59",
+  "in_registered_uses": true
+ },
+ "oxathiapiprolin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "oxydemeton-methyl": {
+  "who_class": "Ib",
+  "who_listed_name": "Oxydemeton-methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Oxydemeton-methyl\", CAS 301-12-2, pdf p.29",
+  "in_registered_uses": true
+ },
+ "oxyfluorfen": {
+  "who_class": "U",
+  "who_listed_name": "Oxyfluorfen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Oxyfluorfen\", CAS 42874-03-3, pdf p.59",
+  "in_registered_uses": true
+ },
+ "paraquat": {
+  "who_class": "II",
+  "who_listed_name": "Paraquat",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Paraquat\", CAS 4685-14-7, pdf p.40. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "paraquat dichloride": {
+  "who_class": "II",
+  "who_listed_name": "Paraquat",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Paraquat\", CAS 4685-14-7, pdf p.40; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "penconazole": {
+  "who_class": "III",
+  "who_listed_name": "Penconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Penconazole\", CAS 66246-88-6, pdf p.50",
+  "in_registered_uses": true
+ },
+ "pencycuron": {
+  "who_class": "U",
+  "who_listed_name": "Pencycuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Pencycuron\", CAS 66063-05-6, pdf p.59",
+  "in_registered_uses": true
+ },
+ "pendimethalin": {
+  "who_class": "II",
+  "who_listed_name": "Pendimethalin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Pendimethalin\", CAS 40487-42-1, pdf p.40",
+  "in_registered_uses": true
+ },
+ "penflufen": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "penoxsulam": {
+  "who_class": "U",
+  "who_listed_name": "Penoxsulam",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Penoxsulam\", CAS 219714-96-2, pdf p.59",
+  "in_registered_uses": true
+ },
+ "permethrin": {
+  "who_class": "II",
+  "who_listed_name": "Permethrin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Permethrin\", CAS 52645-53-1, pdf p.40",
+  "in_registered_uses": true
+ },
+ "phenthoate": {
+  "who_class": "II",
+  "who_listed_name": "Phenthoate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Phenthoate\", CAS 2597-03-7, pdf p.40",
+  "in_registered_uses": true
+ },
+ "phorate": {
+  "who_class": "Ia",
+  "who_listed_name": "Phorate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Phorate\", CAS 298-02-2, pdf p.26. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "phosalone": {
+  "who_class": "II",
+  "who_listed_name": "Phosalone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Phosalone\", CAS 2310-17-0, pdf p.40",
+  "in_registered_uses": true
+ },
+ "phosmet": {
+  "who_class": "II",
+  "who_listed_name": "Phosmet",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Phosmet\", CAS 732-11-6, pdf p.40",
+  "in_registered_uses": true
+ },
+ "phosphamidon": {
+  "who_class": "Ia",
+  "who_listed_name": "Phosphamidon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 1 (Ia), listed as \"Phosphamidon\", CAS 13171-21-6, pdf p.26. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "picarbutrazox": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "picoxystrobin": {
+  "who_class": "III",
+  "who_listed_name": "Picoxystrobin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Picoxystrobin\", CAS 117428-22-5, pdf p.50",
+  "in_registered_uses": true
+ },
+ "pinoxaden": {
+  "who_class": "III",
+  "who_listed_name": "Pinoxaden",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Pinoxaden\", CAS 243973-20-8, pdf p.50",
+  "in_registered_uses": true
+ },
+ "polyoxin d zinc salt": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pretilachlor": {
+  "who_class": "U",
+  "who_listed_name": "Pretilachlor",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Pretilachlor\", CAS 51218-49-6, pdf p.59",
+  "in_registered_uses": true
+ },
+ "prochloraz": {
+  "who_class": "II",
+  "who_listed_name": "Prochloraz",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Prochloraz\", CAS 67747-09-5, pdf p.40",
+  "in_registered_uses": true
+ },
+ "profenofos": {
+  "who_class": "II",
+  "who_listed_name": "Profenofos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Profenofos\", CAS 41198-08-7, pdf p.40",
+  "in_registered_uses": true
+ },
+ "propamocarb hydrochloride": {
+  "who_class": "U",
+  "who_listed_name": "Propamocarb",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Propamocarb\", CAS 24579-73-5, pdf p.60; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "propanil": {
+  "who_class": "II",
+  "who_listed_name": "Propanil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Propanil\", CAS 709-98-8, pdf p.40",
+  "in_registered_uses": true
+ },
+ "propaquizafop": {
+  "who_class": "U",
+  "who_listed_name": "Propaquizafop",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Propaquizafop\", CAS 111479-05-1, pdf p.60",
+  "in_registered_uses": true
+ },
+ "propargite": {
+  "who_class": "III",
+  "who_listed_name": "Propargite",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Propargite\", CAS 2312-35-8, pdf p.50",
+  "in_registered_uses": true
+ },
+ "propiconazole": {
+  "who_class": "II",
+  "who_listed_name": "Propiconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Propiconazole\", CAS 60207-90-1, pdf p.40",
+  "in_registered_uses": true
+ },
+ "propineb": {
+  "who_class": "U",
+  "who_listed_name": "Propineb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Propineb\", CAS 12071-83-9, pdf p.60",
+  "in_registered_uses": true
+ },
+ "propyrisulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pseudomonas fluorescens": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "purpureocillium lilacinum (paecilomyces lilacinus)": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pydiflumetofen": {
+  "who_class": "U",
+  "who_listed_name": "Pydiflumetofen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Pydiflumetofen\", CAS 1228284-64-7, pdf p.60",
+  "in_registered_uses": true
+ },
+ "pymetrozine": {
+  "who_class": "III",
+  "who_listed_name": "Pymetrozine",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Pymetrozine\", CAS 123312-89-0, pdf p.50",
+  "in_registered_uses": true
+ },
+ "pyraclostrobin": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pyraflufen-ethyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pyrazosulfuron-ethyl": {
+  "who_class": "U",
+  "who_listed_name": "Pyrazosulfuron",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 5 (U), listed as \"Pyrazosulfuron\", CAS 98389-04-9, pdf p.60; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "pyribenzoxim": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pyridaben": {
+  "who_class": "II",
+  "who_listed_name": "Pyridaben",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Pyridaben\", CAS 96489-71-3, pdf p.41",
+  "in_registered_uses": true
+ },
+ "pyridalyl": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pyrifluinazon": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "pyriofenone": {
+  "who_class": "III",
+  "who_listed_name": "Pyriofenone",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Pyriofenone\", CAS 688046-61-9, pdf p.50",
+  "in_registered_uses": true
+ },
+ "pyriproxyfen": {
+  "who_class": "U",
+  "who_listed_name": "Pyriproxyfen",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Pyriproxyfen\", CAS 95737-68-1, pdf p.60",
+  "in_registered_uses": true
+ },
+ "pyrithiobac-sodium": {
+  "who_class": "III",
+  "who_listed_name": "Pyrithiobac sodium",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Pyrithiobac sodium\", CAS 123343-16-8, pdf p.50",
+  "in_registered_uses": true
+ },
+ "pyroxasulfone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "quinalphos": {
+  "who_class": "II",
+  "who_listed_name": "Quinalphos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Quinalphos\", CAS 13593-03-8, pdf p.41",
+  "in_registered_uses": true
+ },
+ "quinclorac": {
+  "who_class": "III",
+  "who_listed_name": "Quinclorac",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Quinclorac\", CAS 84087-01-4, pdf p.50",
+  "in_registered_uses": true
+ },
+ "quizalofop-ethyl": {
+  "who_class": "II",
+  "who_listed_name": "Quizalofop",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Quizalofop\", CAS 76578-12-6, pdf p.41; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "quizalofop-p-tefuryl": {
+  "who_class": "II",
+  "who_listed_name": "Quizalofop-p-tefuryl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Quizalofop-p-tefuryl\", CAS 119738-06-6, pdf p.41",
+  "in_registered_uses": true
+ },
+ "saflufenacil": {
+  "who_class": "III",
+  "who_listed_name": "Saflufenacil",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Saflufenacil\", CAS 372137-35-4, pdf p.51",
+  "in_registered_uses": true
+ },
+ "sedaxane": {
+  "who_class": "U",
+  "who_listed_name": "Sedaxane",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Sedaxane\", CAS 874967-67-6, pdf p.60",
+  "in_registered_uses": true
+ },
+ "spinetoram": {
+  "who_class": "U",
+  "who_listed_name": "Spinetoram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Spinetoram\", CAS 187166-40-1, pdf p.60",
+  "in_registered_uses": true
+ },
+ "spinosad": {
+  "who_class": "III",
+  "who_listed_name": "Spinosad",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Spinosad\", CAS 168316-95-8, pdf p.51",
+  "in_registered_uses": true
+ },
+ "spiromesifen": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "spiropidon": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "spirotetramat": {
+  "who_class": "III",
+  "who_listed_name": "Spirotetramat",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Spirotetramat\", CAS 203313-25-1, pdf p.51",
+  "in_registered_uses": true
+ },
+ "streptomycin sulphate": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "sulfentrazone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "sulfosulfuron": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "sulfoxaflor": {
+  "who_class": "II",
+  "who_listed_name": "Sulfoxaflor",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Sulfoxaflor\", CAS 946578-00-3, pdf p.42",
+  "in_registered_uses": true
+ },
+ "sulphur": {
+  "who_class": "III",
+  "who_listed_name": "Sulphur",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Sulphur\", CAS 7704-34-9, pdf p.51",
+  "in_registered_uses": true
+ },
+ "tebuconazole": {
+  "who_class": "II",
+  "who_listed_name": "Tebuconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Tebuconazole\", CAS 107534-96-3, pdf p.42",
+  "in_registered_uses": true
+ },
+ "tebufenpyrad": {
+  "who_class": "II",
+  "who_listed_name": "Tebufenpyrad",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Tebufenpyrad\", CAS 119168-77-3, pdf p.42",
+  "in_registered_uses": true
+ },
+ "tembotrione": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "tetraconazole": {
+  "who_class": "II",
+  "who_listed_name": "Tetraconazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Tetraconazole\", CAS 112281-77-3, pdf p.42",
+  "in_registered_uses": true
+ },
+ "tetracycline hydrochloride": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "tetraniliprole": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "thiacloprid": {
+  "who_class": "II",
+  "who_listed_name": "Thiacloprid",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Thiacloprid\", CAS 111988-49-9, pdf p.42",
+  "in_registered_uses": true
+ },
+ "thiamethoxam": {
+  "who_class": "II",
+  "who_listed_name": "Thiamethoxam",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Thiamethoxam\", CAS 153719-23-4, pdf p.42",
+  "in_registered_uses": true
+ },
+ "thifluzamide": {
+  "who_class": "U",
+  "who_listed_name": "Thifluzamide",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Thifluzamide\", CAS 130000-40-7, pdf p.61",
+  "in_registered_uses": true
+ },
+ "thiocyclam hydrogen oxalate": {
+  "who_class": "II",
+  "who_listed_name": "Thiocyclam",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Thiocyclam\", CAS 31895-22-4, pdf p.42; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "thiodicarb": {
+  "who_class": "II",
+  "who_listed_name": "Thiodicarb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Thiodicarb\", CAS 59669-26-0, pdf p.42",
+  "in_registered_uses": true
+ },
+ "thiometon": {
+  "who_class": "Ib",
+  "who_listed_name": "Thiometon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Thiometon\", CAS 640-15-3, pdf p.29. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "thiophanate-methyl": {
+  "who_class": "U",
+  "who_listed_name": "Thiophanate-methyl",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Thiophanate-methyl\", CAS 23564-05-8, pdf p.61",
+  "in_registered_uses": true
+ },
+ "thiram": {
+  "who_class": "II",
+  "who_listed_name": "Thiram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Thiram\", CAS 137-26-8, pdf p.42",
+  "in_registered_uses": true
+ },
+ "tolfenpyrad": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "tolpyralate": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "topramezone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "triadimefon": {
+  "who_class": "II",
+  "who_listed_name": "Triadimefon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Triadimefon\", CAS 43121-43-3, pdf p.42",
+  "in_registered_uses": true
+ },
+ "triafamone": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "triallate": {
+  "who_class": "III",
+  "who_listed_name": "Tri-allate",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Tri-allate\", CAS 2303-17-5, pdf p.51",
+  "in_registered_uses": true
+ },
+ "triasulfuron": {
+  "who_class": "U",
+  "who_listed_name": "Triasulfuron",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Triasulfuron\", CAS 82097-50-5, pdf p.61",
+  "in_registered_uses": true
+ },
+ "triazophos": {
+  "who_class": "Ib",
+  "who_listed_name": "Triazophos",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 2 (Ib), listed as \"Triazophos\", CAS 24017-47-8, pdf p.29. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "tribasic copper sulfate": {
+  "who_class": "II",
+  "who_listed_name": "Copper sulfate",
+  "matched_via_parent": true,
+  "note": "WHO 2019 Table 3 (II), listed as \"Copper sulfate\", CAS 7758-98-7, pdf p.33; WHO lists the parent/base compound, not this exact salt or ester, so this class is inferred from the parent entry",
+  "in_registered_uses": true
+ },
+ "trichlorfon": {
+  "who_class": "II",
+  "who_listed_name": "Trichlorfon",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Trichlorfon\", CAS 52-68-6, pdf p.43. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "trichoderma harzianum": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "trichoderma reesei": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "trichoderma spp.": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "trichoderma viride": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "tricyclazole": {
+  "who_class": "II",
+  "who_listed_name": "Tricyclazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Tricyclazole\", CAS 41814-78-2, pdf p.43",
+  "in_registered_uses": true
+ },
+ "trifloxystrobin": {
+  "who_class": "U",
+  "who_listed_name": "Trifloxystrobin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Trifloxystrobin\", CAS 141517-21-7, pdf p.61",
+  "in_registered_uses": true
+ },
+ "trifloxysulfuron-sodium": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "triflumezopyrim": {
+  "who_class": "III",
+  "who_listed_name": "Triflumezopyrim",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Triflumezopyrim\", CAS 1263133-33-0, pdf p.51",
+  "in_registered_uses": true
+ },
+ "triflumizole": {
+  "who_class": "II",
+  "who_listed_name": "Triflumizole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Triflumizole\", CAS 99387-89-0, pdf p.43",
+  "in_registered_uses": true
+ },
+ "trifluralin": {
+  "who_class": "U",
+  "who_listed_name": "Trifluralin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Trifluralin\", CAS 1582-09-8, pdf p.61. Banned or restricted in India; included for alerting.",
+  "in_registered_uses": false
+ },
+ "triticonazole": {
+  "who_class": "III",
+  "who_listed_name": "Triticonazole",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 4 (III), listed as \"Triticonazole\", CAS 131983-72-7, pdf p.51",
+  "in_registered_uses": true
+ },
+ "validamycin": {
+  "who_class": "U",
+  "who_listed_name": "Validamycin",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Validamycin\", CAS 37248-47-8, pdf p.62",
+  "in_registered_uses": true
+ },
+ "valifenalate": {
+  "who_class": null,
+  "who_listed_name": null,
+  "matched_via_parent": false,
+  "note": "Not found in WHO 2019 Tables 1-6 (by automated name match). Many biopesticides, newer actives and salts are not listed. Treat as unknown, do not assume low hazard.",
+  "in_registered_uses": true
+ },
+ "zineb": {
+  "who_class": "U",
+  "who_listed_name": "Zineb",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 5 (U), listed as \"Zineb\", CAS 12122-67-7, pdf p.62",
+  "in_registered_uses": true
+ },
+ "ziram": {
+  "who_class": "II",
+  "who_listed_name": "Ziram",
+  "matched_via_parent": false,
+  "note": "WHO 2019 Table 3 (II), listed as \"Ziram\", CAS 137-30-4, pdf p.43",
+  "in_registered_uses": true
+ }
+}

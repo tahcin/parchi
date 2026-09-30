@@ -1,0 +1,34 @@
+rules_version = '2';
+// Parchi audits: an open, anonymised, append-only feed. Anyone may read it (it is published
+// as open data). New records may be created only in the exact shape the app writes; nothing
+// can be edited or deleted from the client.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /audits/{id} {
+      allow read: if true;
+      allow create: if isAudit(request.resource.data, id);
+      allow update, delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function optString(v) { return v == null || (v is string && v.size() <= 80); }
+    function optNumber(v) { return v == null || v is number; }
+    function isAudit(d, id) {
+      return d.keys().hasOnly(['id', 'ts', 'state', 'district', 'lat', 'lon', 'crop', 'level', 'flags', 'actives', 'flagged', 'seed'])
+        && d.id == id
+        && d.ts is string && d.ts.size() <= 40
+        && optString(d.state) && optString(d.district)
+        && optNumber(d.lat) && optNumber(d.lon)
+        && d.crop in ['paddy', 'cotton', 'chilli', 'tomato', 'brinjal', 'wheat', 'maize', 'soybean', 'groundnut',
+                      'sugarcane', 'redgram', 'chickpea', 'blackgram', 'mustard', 'sorghum', 'potato', 'onion',
+                      'okra', 'cabbage', 'cauliflower', 'grapes', 'mango', 'other']
+        && d.level in ['ok', 'careful', 'danger']
+        && d.flags is list && d.flags.size() <= 20
+        && d.actives is list && d.actives.size() <= 20
+        && d.flagged is list && d.flagged.size() <= 20
+        && d.seed == false;
+    }
+  }
+}

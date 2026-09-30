@@ -1,0 +1,618 @@
+{
+ "as_of": "2026-07-31 (date printed on the CIB&RC list); accessed 2026-09-30",
+ "source": "CIB&RC \"List of pesticides which are banned, refused registration and restricted in use\" (updated on 31.07.2026), https://ppqs.gov.in/sites/default/files/list_of_pesticides_which_are_banned_refused_registration_and_restricted_in_use.pdf",
+ "banned": [
+  {
+   "active_ingredient": "alachlor",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "aldicarb",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "aldrin",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "benzene hexachloride",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "benomyl",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "calcium cyanide",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "carbaryl",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "chlorbenzilate",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "chlordane",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "chlorofenvinphos",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "copper acetoarsenite",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "diazinon",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "dibromochloropropane (dbcp)",
+   "note": "Banned for manufacture, import and use. S.O. 569(E) dated 25.07.1989",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "dichlorvos",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018 (listed as \"Dichlorovos\")",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "dicofol",
+   "note": "Banned for manufacture, import and use. S.O. 4294(E) dated 03.10.2023",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "dieldrin",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "dinocap",
+   "note": "Banned for manufacture, import and use. S.O. 4294(E) dated 03.10.2023",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "endosulfan",
+   "note": "Banned for manufacture, import and use. Supreme Court ad-interim order in WP(C) 213 of 2011 dated 13.05.2011, finally disposed 10.01.2017 (listed as \"Endosulfron\")",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "endrin",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "ethyl mercury chloride",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "ethyl parathion",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "ethylene dibromide (edb)",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "fenarimol",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "fenthion",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "heptachlor",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "lindane (gamma-hch)",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "linuron",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "maleic hydrazide",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "menazon",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "methomyl",
+   "note": "Banned for manufacture, import and use. S.O. 4294(E) dated 03.10.2023",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "methoxy ethyl mercury chloride",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "methyl parathion",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "metoxuron",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "nitrofen",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "paraquat dimethyl sulphate",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "pentachloro nitrobenzene (pcnb)",
+   "note": "Banned for manufacture, import and use. S.O. 569(E) dated 25.07.1989",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "pentachlorophenol",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "phenyl mercury acetate",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "phorate",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "phosphamidon",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "sodium cyanide",
+   "note": "Banned for manufacture, import and use. Banned for insecticidal purpose only, S.O. 3951(E) dated 08.08.2018; regulation continues in the extant manner for non-insecticidal uses",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "sodium methane arsonate",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "tetradifon",
+   "note": "Banned for manufacture, import and use.",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "thiometon",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "toxaphene (camphechlor)",
+   "note": "Banned for manufacture, import and use. S.O. 569(E) dated 25.07.1989",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "triazophos",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "tridemorph",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "trichloro acetic acid (tca)",
+   "note": "Banned for manufacture, import and use. S.O. 682(E) dated 17.07.2001",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "trichlorfon",
+   "note": "Banned for manufacture, import and use. S.O. 3951(E) dated 08.08.2018",
+   "category": "I.A banned for manufacture, import and use"
+  },
+  {
+   "active_ingredient": "captafol 80% powder",
+   "note": "Banned for use in India; manufacture for export continues. S.O. 679(E) dated 17.07.2001",
+   "category": "I.B banned for use, manufacture for export only"
+  },
+  {
+   "active_ingredient": "dichlorvos",
+   "note": "Banned for use in India; manufacture for export continues. S.O. 1196(E) dated 20.03.2020",
+   "category": "I.B banned for use, manufacture for export only"
+  },
+  {
+   "active_ingredient": "nicotine sulfate",
+   "note": "Banned for use in India; manufacture for export continues. S.O. 325(E) dated 11.05.1992 (listed as \"Nicotin Sulfate\")",
+   "category": "I.B banned for use, manufacture for export only"
+  },
+  {
+   "active_ingredient": "phorate",
+   "note": "Banned for use in India; manufacture for export continues. S.O. 1196(E) dated 20.03.2020",
+   "category": "I.B banned for use, manufacture for export only"
+  },
+  {
+   "active_ingredient": "triazophos",
+   "note": "Banned for use in India; manufacture for export continues. S.O. 1196(E) dated 20.03.2020",
+   "category": "I.B banned for use, manufacture for export only"
+  }
+ ],
+ "refused": [
+  {
+   "active_ingredient": "2,4,5-t",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "ammonium sulphamate",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "azinphos ethyl",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "azinphos methyl",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "binapacryl",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "calcium arsenate",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "carbophenothion",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "chinomethionate (morestan)",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "dicrotophos",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "epn",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "fentin acetate",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "fentin hydroxide",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "lead arsenate",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "leptophos (phosvel)",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "mephosfolan",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "mevinphos (phosdrin)",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "thiodemeton / disulfoton",
+   "note": "Refused registration"
+  },
+  {
+   "active_ingredient": "vamidothion",
+   "note": "Refused registration"
+  }
+ ],
+ "restricted": [
+  {
+   "active_ingredient": "aluminium phosphide",
+   "restriction": "Pest control operations only by Govt./Govt. undertakings/Govt. organisations/pest control operators under strict supervision of Govt. experts or experts approved by the Plant Protection Adviser, except Aluminium Phosphide 15% 12 g tablet and Aluminium Phosphide 6% tablet. Tube packs of 10 and 20 tablets of 3 g each are banned completely (S.O. 677(E) dated 17.07.2001)."
+  },
+  {
+   "active_ingredient": "captafol",
+   "restriction": "Foliar spray banned; to be used only as seed dresser (S.O. 569(E) dated 25.07.1989). Manufacture of Captafol 80% powder for dry seed treatment banned for use in the country except manufacture for export (S.O. 679(E) dated 17.07.2001)."
+  },
+  {
+   "active_ingredient": "carbofuran",
+   "restriction": "All formulations except Carbofuran 3% encapsulated granule (CG) along with its crop labels may be stopped from use (S.O. 4294(E) dated 03.10.2023).",
+   "only_allowed_formulations": [
+    "3% CG"
+   ]
+  },
+  {
+   "active_ingredient": "chlorpyrifos",
+   "restriction": "Banned for use in Ber, Citrus and Tobacco (S.O. 4294(E) dated 03.10.2023). Listed as \"Chlorpyriphos\".",
+   "banned_on_crops": [
+    "ber",
+    "citrus",
+    "tobacco"
+   ]
+  },
+  {
+   "active_ingredient": "cypermethrin",
+   "restriction": "Cypermethrin 3% Smoke Generator to be used only through pest control operators, not by the general public (Delhi High Court order in WP(C) 10052 of 2009 dated 14.07.2009 and LPA-429/2009 dated 08.09.2009)."
+  },
+  {
+   "active_ingredient": "dazomet",
+   "restriction": "Not permitted on Tea (S.O. 3006(E) dated 31.12.2008).",
+   "banned_on_crops": [
+    "tea"
+   ]
+  },
+  {
+   "active_ingredient": "ddt",
+   "restriction": "Domestic public health use restricted to 10,000 MT per annum except in a major epidemic outbreak (S.O. 295(E) dated 08.03.2006). Use in agriculture withdrawn (S.O. 378(E) dated 26.05.1989)."
+  },
+  {
+   "active_ingredient": "dimethoate",
+   "restriction": "Banned for use in fruits and vegetables that are consumed as raw food items (S.O. 4294(E) dated 03.10.2023).",
+   "banned_on_crops": [
+    "fruits and vegetables consumed raw"
+   ]
+  },
+  {
+   "active_ingredient": "fenitrothion",
+   "restriction": "Banned in agriculture except for locust control in scheduled desert area and public health (S.O. 706(E) dated 03.05.2007)."
+  },
+  {
+   "active_ingredient": "malathion",
+   "restriction": "Banned for use on Sorghum, Pea, Soybean, Castor, Sunflower, Bhindi, Brinjal, Cauliflower, Radish, Turnip, Tomato, Apple, Mango and Grape (S.O. 4294(E) dated 03.10.2023).",
+   "banned_on_crops": [
+    "sorghum",
+    "pea",
+    "soybean",
+    "castor",
+    "sunflower",
+    "bhindi",
+    "brinjal",
+    "cauliflower",
+    "radish",
+    "turnip",
+    "tomato",
+    "apple",
+    "mango",
+    "grape"
+   ]
+  },
+  {
+   "active_ingredient": "mancozeb",
+   "restriction": "Banned for use on Guava, Jowar and Tapioca (S.O. 4294(E) dated 03.10.2023).",
+   "banned_on_crops": [
+    "guava",
+    "jowar",
+    "tapioca"
+   ]
+  },
+  {
+   "active_ingredient": "methyl bromide",
+   "restriction": "Only by Govt./Govt. undertakings/Govt. organisations/pest control operators under strict supervision of Govt. experts or experts approved by the Plant Protection Adviser (G.S.R. 371(E) dated 20.05.1999)."
+  },
+  {
+   "active_ingredient": "monocrotophos",
+   "restriction": "Banned for use on vegetables (S.O. 1482(E) dated 10.10.2005). Monocrotophos 36% SL to be discontinued: no new registration certificates after S.O. 4294(E) dated 03.10.2023; after a one-year period all registrations of 36% SL stand cancelled, and sale, distribution or use is allowed only to clear existing stock until its expiry.",
+   "banned_on_crops": [
+    "vegetables"
+   ]
+  },
+  {
+   "active_ingredient": "oxyfluorfen",
+   "restriction": "Banned for use on Potato and Groundnut (S.O. 4294(E) dated 03.10.2023).",
+   "banned_on_crops": [
+    "potato",
+    "groundnut"
+   ]
+  },
+  {
+   "active_ingredient": "quinalphos",
+   "restriction": "Banned for use on Jute, Cardamom and Sorghum (S.O. 4294(E) dated 03.10.2023).",
+   "banned_on_crops": [
+    "jute",
+    "cardamom",
+    "sorghum"
+   ]
+  },
+  {
+   "active_ingredient": "trifluralin",
+   "restriction": "All uses except in wheat prohibited and completely banned from 08.08.2018; label must warn it is toxic to aquatic organisms (S.O. 3951(E) dated 08.08.2018)."
+  }
+ ],
+ "withdrawn": [
+  {
+   "active_ingredient": "dalapon",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "ferbam",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "formothion",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "nickel chloride",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "paradichlorobenzene (pdcb)",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "simazine",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "sirmate",
+   "note": "S.O. 2485(E) dated 24.09.2014. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  },
+  {
+   "active_ingredient": "warfarin",
+   "note": "S.O. 915(E) dated 15.06.2006. Withdrawal may become inoperative once complete data per guidelines is submitted and accepted by the Registration Committee."
+  }
+ ],
+ "draft_2020_27_pesticides": {
+  "note": "The 2020 draft Banning of Insecticides Order (S.O. 1512(E), May 2020) proposed banning 27 pesticides. The outcome for each is taken from the official 31.07.2026 CIB&RC list: the final order S.O. 4294(E) dated 03.10.2023 banned 3 (dicofol, dinocap, methomyl) and restricted 8. The list of 27 and the draft order number come from secondary sources (Wikipedia list of banned pesticides in India, ASHA Kisan Swaraj), so this block is marked uncertain; the outcomes themselves are from the official list.",
+  "uncertain": true,
+  "items": [
+   {
+    "active_ingredient": "acephate",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "atrazine",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "benfuracarb",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "butachlor",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "captan",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "carbendazim",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "carbofuran",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "chlorpyrifos",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "2,4-d",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "deltamethrin",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "dicofol",
+    "outcome": "banned (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "dimethoate",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "dinocap",
+    "outcome": "banned (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "diuron",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "malathion",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "mancozeb",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "methomyl",
+    "outcome": "banned (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "monocrotophos",
+    "outcome": "restricted; 36% SL phased out (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "oxyfluorfen",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "pendimethalin",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "quinalphos",
+    "outcome": "restricted (S.O. 4294(E) dated 03.10.2023)"
+   },
+   {
+    "active_ingredient": "sulfosulfuron",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "thiodicarb",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "thiophanate-methyl",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "thiram",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "zineb",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   },
+   {
+    "active_ingredient": "ziram",
+    "outcome": "not banned or restricted in the 31.07.2026 CIB&RC list"
+   }
+  ]
+ },
+ "app_notes": [
+  "Monocrotophos 36% SL: registrations stand cancelled one year after 03.10.2023, so any 36% SL sold now is stock clearance at most. Flag it.",
+  "Carbofuran: only 3% CG remains permitted. Flag any other carbofuran formulation.",
+  "Phorate and triazophos are banned for use in India (manufacture for export only). Neither appears in the 31.03.2026 Major Uses lists.",
+  "Dichlorvos (DDVP) is banned (S.O. 3951(E) 2018) and listed again as export-only (S.O. 1196(E) 2020).",
+  "Crop-specific bans are in restricted[].banned_on_crops."
+ ]
+}

@@ -1,26 +1,257 @@
 @import "tailwindcss";
 
+/* Parchi: looks like the dealer's chit it checks. Warm paper, carbon ink, rubber stamps. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f6efdf;
+  --paper-2: #efe4cc;
+  --rule: #d9c9a6;
+  --ink: #1f2a44;
+  --ink-soft: #4b5670;
+  --stamp-red: #c8302b;
+  --stamp-amber: #c98a0c;
+  --stamp-green: #2f7d3a;
+  --leaf: #2f6b3a;
+
+  /* Motion: one easing family, three durations. */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --t-micro: 160ms;
+  --t-screen: 280ms;
+  --t-hero: 450ms;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-rule: var(--rule);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-danger: var(--stamp-red);
+  --color-careful: var(--stamp-amber);
+  --color-ok: var(--stamp-green);
+  --color-leaf: var(--leaf);
+  --font-sans: "Baloo 2", "Baloo Bhai 2", "Baloo Chettan 2", "Baloo Da 2", "Baloo Paaji 2",
+    "Baloo Tamma 2", "Baloo Tammudu 2", "Baloo Thambi 2", "Baloo Bhaina 2", "Noto Sans", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ruled-paper background with a faint margin line, like a shop's bill book. */
+/* Page background: plain warm paper with a soft vignette. Ruled lines only go on surfaces that
+   really are chits (.lined), where the layout can sit on them; on the page they fought the grid. */
+.ruled {
+  background-color: var(--paper);
+  background-image: radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.45), transparent 60%);
+}
+.lined {
+  background-image: repeating-linear-gradient(180deg, transparent 0 31px, var(--rule) 31px 32px);
+  background-position: 0 14px;
+}
+
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Keyboard focus: a thick carbon-ink ring with a paper gap, visible on every surface. */
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+.bg-ink:focus-visible,
+.bg-leaf:focus-visible {
+  outline-color: var(--stamp-amber);
+}
+
+/* Chunky tactile buttons: a hard offset shadow so they look pressable. On press the button
+   drops onto its shadow at once (only transform is animated; the shadow just switches). */
+.press,
+.press-sm,
+.press-big {
+  box-shadow: 0 5px 0 0 var(--ink);
+  transition: transform 80ms var(--ease-out);
+}
+.press-sm {
+  box-shadow: 0 3px 0 0 var(--ink);
+}
+.press-big {
+  box-shadow: 0 7px 0 0 var(--ink);
+}
+.press:active,
+.press-big:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+.press-sm:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+
+/* ---------------------------------------------------------------------------------------
+   Motion. Every animation answers "what just happened" or "where do I look next".
+   Only transform and opacity move, so cheap phones stay smooth.
+   --------------------------------------------------------------------------------------- */
+
+/* A new screen arrives: rises a few pixels and fades in. The old one just goes. */
+.screen,
+.reveal {
+  animation: enter var(--t-screen) var(--ease-out) both;
+}
+@keyframes enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Small things appearing in place (details panel, confirm overlay). */
+.fade {
+  animation: fade var(--t-micro) var(--ease-out) both;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* A step finished: its tick pops in. */
+.pop {
+  animation: pop var(--t-micro) var(--ease-out) both;
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Dropdowns: quick in from the trigger, quicker out. */
+.drop-in {
+  animation: drop-in var(--t-micro) var(--ease-out) both;
+}
+.drop-out {
+  animation: drop-out 100ms var(--ease-in) both;
+}
+@keyframes drop-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes drop-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Toggle knob and disclosure chevron. */
+.knob,
+.chev {
+  transition: transform var(--t-micro) var(--ease-out);
+}
+
+/* The camera button breathes slowly to invite the first tap, then stops. */
+.breathe {
+  animation: breathe 2.4s ease-in-out infinite alternate;
+}
+.breathe:active {
+  animation: none;
+}
+@keyframes breathe {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+/* Recording: blinks only while the mic is live. */
+.rec-dot {
+  animation: blink 1s ease-in-out infinite alternate;
+}
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.2; }
+}
+
+/* Checking: the one looping "working" indicator, a scan bar gliding down the photo.
+   The layer is as tall as the photo, so translateY(%) maps to the photo's height. */
+.scan {
+  animation: scan 2.4s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes scan {
+  from { transform: translateY(-2%); }
+  to { transform: translateY(88%); }
+}
+.corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-color: var(--paper);
+  border-radius: 4px;
+  filter: drop-shadow(0 0 1px var(--ink));
+}
+
+/* The verdict. The photo settles (screen enter, 280 ms), a 150 ms pause, then the stamp is
+   pressed: it comes down fast, lands at 700 ms with a tiny settle, and the card takes the
+   jolt. The headline and rows follow (timings in page.tsx). */
+.stamp {
+  border: 7px double currentColor;
+  border-radius: 18px;
+  padding: 10px 24px 8px 12px;
+  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='1.3' numOctaves='3'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -4 3.3'/></filter><rect width='100%' height='100%' filter='url(%23r)'/></svg>");
+  mask-size: 200px;
+  transform: rotate(-7deg);
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 18%, transparent);
+  animation: stamp var(--t-hero) 430ms both;
+}
+@keyframes stamp {
+  0% { opacity: 0; transform: rotate(-7deg) scale(1.5); animation-timing-function: cubic-bezier(0.55, 0, 0.9, 0.45); }
+  60% { opacity: 1; transform: rotate(-7deg) scale(0.97); animation-timing-function: var(--ease-out); }
+  100% { opacity: 1; transform: rotate(-7deg) scale(1); }
+}
+.thud {
+  animation: thud 200ms var(--ease-out) 700ms both;
+}
+@keyframes thud {
+  0% { transform: none; }
+  35% { transform: translateY(3px); }
+  100% { transform: none; }
+}
+
+/* Dealer note: torn from a perforated bill book along its top edge. */
+.perforated::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -9px;
+  height: 12px;
+  background:
+    radial-gradient(circle at 7px 0, transparent 5px, var(--ink) 5px, var(--ink) 7px, #fff 7px) 0 3px / 14px 9px repeat-x;
+}
+
+/* Reduced motion: keep every state change, drop the movement. Things crossfade or just appear. */
+@media (prefers-reduced-motion: reduce) {
+  .screen, .reveal, .fade, .pop, .drop-in {
+    animation-name: fade-only;
+  }
+  .stamp, .thud, .breathe, .rec-dot, .drop-out {
+    animation: none;
+  }
+  .scan {
+    display: none;
+  }
+  .press, .press-sm, .press-big, .knob, .chev {
+    transition: none;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fade-only {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
