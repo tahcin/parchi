@@ -1,6 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
-
 // One anonymised record per audit. No name, phone number, photo or exact location:
 // only the district and a location rounded to about 10 km.
 export interface Report {
@@ -15,7 +12,7 @@ export interface Report {
   flags: string[]; // flag codes
   actives: string[]; // active ingredients on the chit
   flagged: string[]; // active ingredients that got a flag
-  seed: boolean; // true for the labelled demo seed, false for live audits
+  seed: boolean; // always false; kept because the Firestore rules and older clients expect it
 }
 
 const PROJECT = process.env.FIREBASE_PROJECT_ID;
@@ -90,19 +87,6 @@ async function liveReports(): Promise<Report[]> {
   return [...out, ...memory];
 }
 
-let seedCache: Report[] | null = null;
-function seedReports(): Report[] {
-  if (!seedCache) {
-    try {
-      seedCache = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data", "seed_reports.json"), "utf8"));
-    } catch {
-      seedCache = [];
-    }
-  }
-  return seedCache!;
-}
-
-export async function allReports(includeSeed = true): Promise<Report[]> {
-  const live = await liveReports().catch(() => memory);
-  return includeSeed ? [...live, ...seedReports()] : live;
+export async function allReports(): Promise<Report[]> {
+  return liveReports().catch(() => memory);
 }

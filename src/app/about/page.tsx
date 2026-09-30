@@ -81,7 +81,7 @@ export default function About() {
           <li>Dose checks for per-litre doses use the farmer&apos;s tanks per acre once they tell us; until then they assume the label&apos;s water volume and say so.</li>
           <li>
             The Kisan Call Centre layer is a sample (11 months) and only matches product names written in English letters, so states whose advisers write in
-            English show up more. The demo seed layer is synthetic and labelled as such.
+            English show up more.
           </li>
           <li>Parchi is a second opinion, not a legal ruling. The Kisan Call Centre (1800-180-1551) is one tap away.</li>
         </ul>

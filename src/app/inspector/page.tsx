@@ -34,12 +34,11 @@ const FLAG_LABEL: Record<string, string> = {
 const ILLEGAL = ["BANNED", "RESTRICTED_CROP", "FORMULATION_STOPPED"];
 const WEATHER = ["RAIN", "WIND", "HEAT"];
 
-type Layer = "live" | "kcc" | "seed";
+type Layer = "live" | "kcc";
 
 const LAYERS: { id: Layer; label: string }[] = [
   { id: "live", label: "Live audits" },
   { id: "kcc", label: "KCC calls (real, gov data)" },
-  { id: "seed", label: "Demo seed" },
 ];
 
 // Shape of data/kcc_layer.json (built by scripts/kcc_layer.py, served at /api/v1/kcc).
@@ -121,7 +120,6 @@ export default function Inspector() {
   const [loading, setLoading] = useState(true);
   // Fixed when the page opens, so the 14-day window does not shift between renders.
   const [now] = useState(() => Date.now());
-  const showSeed = layer === "seed";
   const isKcc = layer === "kcc" && kcc !== null;
 
   function pickLayer(l: Layer) {
@@ -137,18 +135,18 @@ export default function Inspector() {
       .then((j: KccLayer | null) => {
         const ok = !!j?.districts?.length;
         setKcc(ok ? j : null);
-        setLayer((l) => l ?? (ok ? "kcc" : "seed"));
+        setLayer((l) => l ?? (ok ? "kcc" : "live"));
       });
   }, []);
 
   useEffect(() => {
     if (layer === null || layer === "kcc") return;
-    fetch(`/api/v1/reports${showSeed ? "" : "?live=1"}`, { cache: "no-store" })
+    fetch("/api/v1/reports", { cache: "no-store" })
       .then((r) => r.json())
       .then((j) => setRows(j.reports ?? []))
       .catch(() => setRows([]))
       .finally(() => setLoading(false));
-  }, [layer, showSeed]);
+  }, [layer]);
 
   const states = useMemo(
     () =>
@@ -160,7 +158,6 @@ export default function Inspector() {
   // A state picked on one layer may not exist on another; fall back to all states there.
   const shownState = states.includes(state) ? state : "";
   const view = useMemo(() => (shownState ? rows.filter((r) => r.state === shownState) : rows), [rows, shownState]);
-  const live = rows.filter((r) => !r.seed).length;
 
   const stats = useMemo(() => {
     const flaggedChits = view.filter((r) => r.flags.some((f) => !WEATHER.includes(f))).length;
@@ -302,12 +299,15 @@ export default function Inspector() {
           <KccSection kcc={kcc!} v={kccView} state={shownState} />
         ) : (
           <>
-            {showSeed && (
-              <p className="mt-4 flex gap-3 rounded-xl border-2 border-careful bg-careful/10 px-4 py-2.5 text-base">
-                <AlertIcon size={20} className="mt-0.5 shrink-0 text-careful" />
+            {!loading && rows.length === 0 && (
+              <p className="mt-4 flex gap-3 rounded-xl border-2 border-ink/30 bg-white/70 px-4 py-2.5 text-base">
+                <AlertIcon size={20} className="mt-0.5 shrink-0 text-ink-soft" />
                 <span>
-                  <strong>Demo seed:</strong> {rows.length - live} of these rows are synthetic, generated to show how the dashboard works at scale.{" "}
-                  {live} {live === 1 ? "is a live audit" : "are live audits"} from the app. Pick &quot;Live audits&quot; to see live data only.
+                  <strong>No live checks yet.</strong> Every chit checked in the{" "}
+                  <Link href="/" className="underline">
+                    farmer app
+                  </Link>{" "}
+                  appears here within seconds: district, crop, verdict and flagged products, never the farmer&apos;s identity.
                 </span>
               </p>
             )}
@@ -353,12 +353,12 @@ export default function Inspector() {
               </Panel>
               <Panel title="Open data API (CC BY 4.0)">
                 <p>Any state, Krishi Vigyan Kendra or research group can pull the same anonymised feed:</p>
-                <pre className="mt-2 overflow-x-auto rounded-lg bg-ink p-3 text-sm text-paper">GET /api/v1/reports?state=Andhra%20Pradesh&amp;crop=chilli&amp;live=1</pre>
+                <pre className="mt-2 overflow-x-auto rounded-lg bg-ink p-3 text-sm text-paper">GET /api/v1/reports?state=Andhra%20Pradesh&amp;crop=chilli</pre>
                 <p className="mt-2 text-sm text-ink-soft">
                   Fields: district, state, location rounded to about 10 km, crop, verdict, flag codes and active ingredients. Checked against CIB&amp;RC approved
                   uses (31.03.2026) and the banned and restricted list (31.07.2026).
                 </p>
-                <a href="/api/v1/reports?live=1" className="mt-2 inline-flex min-h-11 items-center gap-1.5 font-bold underline underline-offset-2">
+                <a href="/api/v1/reports" className="mt-2 inline-flex min-h-11 items-center gap-1.5 font-bold underline underline-offset-2">
                   Open live JSON <ArrowRightIcon size={18} />
                 </a>
               </Panel>

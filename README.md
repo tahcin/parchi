@@ -60,8 +60,8 @@ The model reads and explains. It never decides whether a product is legal: that 
 
 ## For states
 
-- `/inspector`: three layers on one district map: live audits from the app, real Kisan Call Centre call data, and a labelled demo seed. Most flagged products and a cross-state early warning.
-- `GET /api/v1/reports?state=&crop=&live=1`: anonymised open feed (district, rounded location, crop, verdict, flag codes, actives). No names, phone numbers or photos. Stored in Firestore with append-only, schema-checked security rules (`firestore.rules`).
+- `/inspector`: two layers on one district map: live audits from the app and real Kisan Call Centre call data. Most flagged products and a cross-state early warning. No synthetic data.
+- `GET /api/v1/reports?state=&crop=`: anonymised open feed (district, rounded location, crop, verdict, flag codes, actives). No names, phone numbers or photos. Stored in Firestore with append-only, schema-checked security rules (`firestore.rules`).
 - `GET /api/v1/kcc`: the Kisan Call Centre layer as JSON.
 
 ## Run it
@@ -87,7 +87,7 @@ Flash-Lite read our test chits correctly in about 2 seconds and has the most gen
 
 ## Data and limits
 
-See [`data/SOURCES.md`](data/SOURCES.md). Detailed crop rules cover 22 crops (2,210 approved uses); ban and hazard checks work for every crop. "Not found" means "not confirmed", and the app says so. The inspector dashboard includes a clearly labelled synthetic demo seed (`data/seed_reports.json`, every row has `seed: true`).
+See [`data/SOURCES.md`](data/SOURCES.md). Detailed crop rules cover 22 crops (2,210 approved uses); ban and hazard checks work for every crop. "Not found" means "not confirmed", and the app says so.
 
 The inspector map also has a real-data layer from the Ministry of Agriculture's Kisan Call Centre transcripts (data.gov.in, GODL-India): 226,203 calls dated 2022 to 2024 (a sample of 11 months with data, 35 states and UTs), of which 426 plant-protection calls in 195 districts name a banned, crop-restricted or WHO Class Ia/Ib pesticide, mostly in the adviser's answer. Products that were already banned on the date of the call were named 135 times in advisers' answers (dichlorvos 56, phorate 30, triazophos 23, carbaryl 10 and others; one answer can name more than one). The rows come from a public mirror of the official file because api.data.gov.in was unreachable on the build date. `scripts/kcc_layer.py` rebuilds `data/kcc_layer.json`; method and caveats are in `data/SOURCES.md` section 6. It shows where these products are still being talked about, not sales.
 
