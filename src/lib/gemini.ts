@@ -195,9 +195,11 @@ function slim(a: Audit) {
 }
 
 // Gemini native text to speech. Returns a WAV file (base64) or null.
-export async function speak(text: string, languageName: string): Promise<string | null> {
+// Only the words to speak: current TTS models read any instruction aloud as part of the text.
+// The language comes from the text itself.
+export async function speak(text: string): Promise<string | null> {
   const res = await generate(TTS_MODELS, {
-    contents: [{ role: "user", parts: [{ text: `Say this slowly and warmly, in ${languageName}, like a village elder:\n${text}` }] }],
+    contents: [{ role: "user", parts: [{ text }] }],
     config: {
       responseModalities: ["AUDIO"],
       speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } } },

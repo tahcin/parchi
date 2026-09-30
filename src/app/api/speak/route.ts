@@ -1,5 +1,4 @@
 import { speak } from "@/lib/gemini";
-import { getLanguage } from "@/lib/i18n";
 
 export const maxDuration = 60;
 
@@ -19,7 +18,7 @@ export async function POST(req: Request) {
   const cached = cache.get(key);
   if (cached) return Response.json({ audio: cached });
   try {
-    const audio = await speak(text.slice(0, 800), getLanguage(typeof lang === "string" ? lang : undefined).english);
+    const audio = await speak(text.slice(0, 800));
     if (!audio) return Response.json({ error: "no_audio" }, { status: 502 });
     const url = `data:audio/wav;base64,${audio}`;
     if (cache.size > 60) cache.delete(cache.keys().next().value!);
